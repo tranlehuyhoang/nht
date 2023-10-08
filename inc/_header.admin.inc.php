@@ -5,10 +5,12 @@ include_once __DIR__ .  '/../classes/brand.php';
 include_once __DIR__ .  '/../classes/cart.php';
 include_once __DIR__ .  '/../classes/category.php';
 include_once __DIR__ .  '/../classes/note.php';
+include_once __DIR__ .  '/../classes/order.php';
 include_once __DIR__ .  '/../classes/product.php';
 include_once __DIR__ .  '/../classes/user.php';
 $adminlogin = new adminlogin();
 $brand = new brand();
+$order = new order();
 $cart = new cart();
 $category = new category();
 $note = new note();
@@ -252,7 +254,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['act
                             </ul>
                         </div>
                     </li>
-
+                    <li class="nav-item">
+                        <a href="list-order.php" class="nav-link">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nK3RPQ6DMAwFYDMVwS26IlaQuEnn9kxdI2Xze2HJkLt1CgoDoAoEkbDkzZ/lH5G7wlpbO+eelwHJhqovAJ2IFKcAQJsAU5L9gowxJVRHAj8CcZPfBeiMhhhjkTp9/gr3gc6oSeCdBUIIDwK8MNK6R9bSt53Ve19lPe4oJisTorJqiO3FAAAAAElFTkSuQmCC">
+                            <span class="link-title">Order</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>

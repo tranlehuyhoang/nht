@@ -1,7 +1,7 @@
 <?php
 include_once __DIR__ . '/../lib/database.php';
-include_once __DIR__ . '/../helpers/format.php';
 ?>
+
 <?php
 class user
 {

@@ -1,6 +1,5 @@
 <?php
-include_once "../lib/database.php";
-include_once "../helpers/format.php";
+include_once __DIR__ . '/../lib/database.php';
 ?>
 
 <?php

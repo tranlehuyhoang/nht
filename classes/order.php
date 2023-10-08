@@ -3,7 +3,7 @@ include_once __DIR__ . '/../lib/database.php';
 ?>
 
 <?php
-class cart
+class order
 {
     private $db;
     private $fm;

@@ -35,33 +35,35 @@ include_once __DIR__ . '/../inc/_header.client.inc.php';
                         while ($result = $showssss->fetch_assoc()) {
                             # code...
                 ?>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <div class="axil-product product-style-one has-color-pick mt--40">
-                                    <div class="thumbnail">
-                                        <a href="./page/product-detail.php?productid=<?php echo $result['productId']; ?>">
-                                            <img src="<?php echo 'data:image/png;base64,' . base64_encode($result['image']); ?>" alt="Product Images">
-                                        </a>
-                                        <div class="product-hover-action">
-                                            <ul class="cart-action">
-                                                <li class="select-option"><a href="page/cart.php">Add to Cart</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="inner">
-                                            <h5 class="title"><a href="./page/product-detail.php?productid=<?php echo $result['productId']; ?>">
-                                                    <?php echo $result['productName'] ?>
-                                                </a></h5>
-                                            <div class="product-price-variant">
-                                                <span class="price current-price">
-                                                    <?php echo number_format($result['price']) ?> $
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="axil-product product-style-one has-color-pick mt--40">
+                        <div class="thumbnail">
+                            <a href="./client/product-detail.php?productid=<?php echo $result['productId']; ?>">
+                                <img src="<?php echo 'data:image/png;base64,' . base64_encode($result['image']); ?>"
+                                    alt="Product Images">
+                            </a>
+                            <div class="product-hover-action">
+                                <ul class="cart-action">
+                                    <li class="select-option"><a href="client/cart.php">Add to Cart</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <div class="inner">
+                                <h5 class="title"><a
+                                        href="./client/product-detail.php?productid=<?php echo $result['productId']; ?>">
+                                        <?php echo $result['productName'] ?>
+                                    </a></h5>
+                                <div class="product-price-variant">
+                                    <span class="price current-price">
+                                        <?php echo number_format($result['price']) ?> $
+                                    </span>
                                 </div>
                             </div>
-                        <?php
+                        </div>
+                    </div>
+                </div>
+                <?php
                             $i++;
                         }
                     } else {

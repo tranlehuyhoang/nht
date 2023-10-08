@@ -1,3 +1,2 @@
 <?php
-header('Location:page/home.php');
-?>
+header('Location:client/home.php');
