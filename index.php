@@ -1,2 +1,2 @@
 <?php
-// header('Location:client/home.php');
+header('Location:client/home.php');
