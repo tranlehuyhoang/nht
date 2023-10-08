@@ -1,0 +1,79 @@
+/*-------------------------
+Countdown 
+--------------------------*/
+.countdown {
+    display: flex;
+    .countdown-section {
+        height: 80px;
+        width: 80px;
+        background-color: var(--color-white);
+        border-radius: 50%;
+        margin-right: 15px;
+        display: flex;  
+        align-items: center;
+        justify-content: center;
+        text-align: center; 
+        @media #{$md-layout} {
+            height: 70px;
+            width: 70px;
+        } 
+        @media #{$sm-layout} {
+            height: 60px;
+            width: 60px;
+            margin-right: 10px;
+        }
+        @media #{$small-mobile} {
+            margin-right: 6px;
+        }
+        &:last-child {
+            margin-right: 0;
+            &:after {
+                display: none;
+            }
+        }
+    }
+    .countdown-number {
+        font-size: 24px;
+        font-weight: var(--s-medium);
+        color: var(--color-black);
+        line-height: 1;
+        margin-bottom: 5px;
+        @media #{$md-layout} {
+            font-size: 20px;
+        }
+        @media #{$sm-layout} {
+            font-size: 18px;
+        }
+    }
+    .countdown-unit {
+        line-height: 1;
+        font-size: 14px;
+        font-weight: var(--s-medium);
+    }
+}
+
+.sale-countdown {
+    .countdown-section {
+        background-color: var(--color-lighter);
+        height: 50px;
+        width: 50px;
+        margin-right: 25px;
+        position: relative;
+        &:after {
+            content:":";
+            font-size: var(--font-size-b2);
+            color: var(--color-heading);
+            font-weight: var(--s-medium);
+            position: absolute;
+            right: -14px;
+        }
+    }
+    .countdown-number {
+        margin-bottom: 0;
+        font-size: var(--font-size-b2);
+        color: var(--color-heading);
+    }
+    .countdown-unit {   
+        display: none;
+    }
+}

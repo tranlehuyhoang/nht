@@ -1,0 +1,103 @@
+/*----------------------
+Variables 
+-----------------------*/
+:root {
+    //Themes colors
+    --color-primary: #3577f0;
+    --light-primary: #8c71db;
+    --color-secondary: #ff497c;
+    --color-tertiary: #FAB8C4;
+    --color-white: #ffffff;
+    --color-dark: #27272E;
+    --color-black: #000000;
+    --color-light: #CBD3D9;
+    --color-lighter: #F6F7FB;
+    --color-lightest: #C4C4C4;
+
+    // Chart Color 
+    --color-chart01: #896BA7;
+    --color-chart02: #BADEFF;
+    --color-chart03: #E76458;
+    // Typo Color 
+    --color-heading: #292930; 
+    --color-body: #777777;
+    // Border Color 
+    --color-border-light: #E3E6E9;
+    --color-border-dark: #42424A;
+    // Gery Colors 
+    --color-gray: #999FAE;
+    --color-midgray: #878787;
+    // Extra Color 
+    --color-extra01: #999FAE;
+    // Notify Colors 
+    --color-success: #3EB75E;
+    --color-danger: #FF0003;
+    --color-warning: #FF8F3C;
+    --color-info: #1BA2DB;
+    //Social icon colors
+    --color-facebook: #3B5997;
+    --color-twitter: #1BA1F2;
+    --color-youtube: #ED4141;
+    --color-linkedin: #0077B5;
+    --color-pinterest: #E60022;
+    --color-instagram: #C231A1;
+    --color-vimeo: #00ADEF;
+    --color-twitch: #6441A3;
+    --color-discord: #7289da;
+    //Border-radius
+    --radius: 6px;
+    --radius-big: 16px;
+    --radius-small: 6px;
+    --border-width: 2px;
+    --border-thin: 1px;
+    //Font weight
+    //primary font
+    --p-light: 300;
+    --p-regular: 400;
+    --p-medium: 500;
+    --p-semi-bold: 600;
+    --p-bold: 700;
+    --p-extra-bold: 800;
+    --p-black: 900;
+    //secondary font
+    --s-light: 300;
+    --s-regular: 400;
+    --s-medium: 500;
+    --s-bold: 700;
+    --s-black: 900;
+    //Shadows
+    --shadow-primary: 0px 4px 10px rgba(37, 47, 63, 0.1);
+    --shadow-light: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
+    --shadow-dark: 0 16px 32px 0 rgba(0, 0, 0, 0.04);
+    //transition easing
+    --transition: 0.3s;
+    //Font Family
+    --font-primary: 'DM Sans', sans-serif;
+    --font-secondary: 'DM Sans', sans-serif;
+    --font-awesome: 'Font Awesome 5 Pro';
+    //Fonts Size
+    --font-size-b1: 16px;
+    --font-size-b2: 14px;
+    --font-size-b3: 12px;
+    //Line Height
+    --line-height-b1: 1.7;
+    --line-height-b2: 1.65;
+    --line-height-b3: 1.6;
+    // Heading Font 
+    --h1: 46px;
+    --h2: 36px;
+    --h3: 28px;
+    --h4: 24px;
+    --h5: 20px; 
+    --h6: 18px; 
+}
+
+// Layouts Variation
+$smlg-device: 'only screen and (max-width: 1199px)';
+$extra-device: 'only screen and (min-width: 1600px) and (max-width: 1919px)';
+$laptop-device: 'only screen and (min-width: 1200px) and (max-width: 1599px)';
+$lg-layout: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md-layout:'only screen and (min-width: 768px) and (max-width: 991px)';
+$sm-layout:'only screen and (max-width: 767px)';
+$large-mobile: 'only screen and (max-width: 575px)';
+$small-mobile: 'only screen and (max-width: 479px)';

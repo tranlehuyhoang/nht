@@ -1,0 +1,12 @@
+DirectoryIndex index.php index.html index.htm index2.html
+
+
+ErrorDocument 403 http://nht-ps27199.free.nf/403
+ErrorDocument 404 http://nht-ps27199.free.nf/404
+ErrorDocument 500 http://nht-ps27199.free.nf/505
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]

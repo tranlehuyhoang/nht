@@ -1,0 +1,49 @@
+/*-------------------------
+    Back To Top  
+--------------------------*/
+.back-to-top {
+    position: fixed;
+    bottom: -40px;
+    right: 40px;
+    display: block;
+    width: 45px;
+    height: 45px;
+    line-height: 46px;
+    background: var(--color-primary);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: var(--radius);
+    opacity: 0;
+    transform: scale(0.3);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9;
+    transition: all .3s;
+    @media #{$large-mobile} {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+    &:focus {
+    	color: var(--color-white);
+    }
+    &.show {
+	 	bottom: 40px;
+	    right: 40px;
+	    opacity: 1;
+	    transform: scale(1);
+        @media #{$large-mobile} {
+            bottom: 10px;
+            right: 10px;
+        }
+        &:hover {
+        color: var(--color-white);
+           bottom: 45px;
+           opacity: 1;
+           @media #{$large-mobile} {
+               bottom: 10px;
+           }
+       }
+    }
+}
+

@@ -1,0 +1,64 @@
+/*-------------------------
+Price Slider
+--------------------------*/
+
+.ui-slider-handle.ui-state-default.ui-corner-all {
+    background: #5956E9 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 50%;
+    height: 13px;
+    margin-left: -1px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 13px;
+}
+
+.ui-slider-range.ui-widget-header.ui-corner-all {
+    background: #DBDEFF none repeat scroll 0 0;
+    border-radius: 0;
+    height: 4px;
+}
+
+.ui-widget.ui-widget-content {
+    background: #CBD3D9 none repeat scroll 0 0;
+    border: medium none;
+    height: 4px;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    margin-left: 0;
+}
+
+.ui-slider-handle.ui-corner-all.ui-state-default.ui-state-focus {
+    outline: medium none;
+}
+
+.amount-range {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    color: #666;
+    font-size: 15px;
+    margin-top: 10px;
+    padding: 5px 0;
+}
+
+.amount-range,
+.price-button {
+    width: 100%;
+    word-spacing: 10px;
+    padding: 0!important;
+    font-weight: 500!important;
+    font-size: 16px!important;
+    line-height: 1!important;
+    margin-top: 0!important;
+}
+
+.input-range {
+    font-weight: 500;
+    padding-right: 3px;
+}
+
+.flter-option.mb-80 {
+    padding-right: 15px;
+}

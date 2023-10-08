@@ -1,0 +1,149 @@
+/*----------------------
+    Button Styles  
+-----------------------*/
+
+a,
+button {
+    &.axil-btn {
+        border-radius: 6px;
+        font-size: var(--font-size-b1);
+        line-height: var(--line-height-b1);
+        font-weight: 700;
+        display: inline-block;
+        padding: 16px 38px;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        z-index: 1;
+        &:before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            border-radius: 6px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            transition: transform .5s cubic-bezier(.165,.84,.44,1);
+        }
+        @media #{$sm-layout} {
+            padding: 12px 25px;
+            font-size: 14px;
+        }
+        i {
+            font-weight: 400;
+            margin-right: 10px;
+            color: var(--color-heading);
+            transition: 0.3s;
+        }
+        &:hover {
+            &:before {
+                transform: scale(1.1);
+            }
+        }
+        &.right-icon {
+            i {
+                margin-left: 5px;
+                margin-right: 0;
+                color: var(--color-heading);
+                position: relative;
+                top: 2px;
+            }
+        }
+        &.btn-bg-white {
+            background-color: var(--color-white);
+            color: var(--color-heading);
+            box-shadow: 0 16px 32px 0 rgba(103, 103, 103, .06);
+            &:before {
+                background-color: var(--color-white);
+            }
+        }
+        &.btn-bg-lighter {
+            background-color: var(--color-lighter);
+            color: var(--color-body);
+            &:before {
+                background-color: var(--color-lighter);
+            }
+        }
+        &.btn-bg-primary {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            &:before {
+                background-color: var(--color-primary);
+            }
+            i {
+                color: var(--color-white);
+            }
+            &:hover {
+                // background-color: var(--color-secondary);
+                &:after {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        &.btn-bg-secondary {
+            background-color: var(--color-secondary);
+            color: var(--color-white);
+            i {
+                color: var(--color-white);
+            }
+            &:before {
+                background-color: var(--color-secondary);
+            }
+        }
+        &.btn-outline {
+            border: 2px solid var(--color-heading);
+            &:hover {
+                background-color: var(--color-primary);
+                border-color: var(--color-primary);
+                color: var(--color-white);
+            }
+        }
+        &.wishlist-btn {
+            border: 2px solid var(--color-light);
+            padding: 15px 16px 10px;
+            @media #{$sm-layout} {
+                padding: 11px 18px 9px;
+            }
+            i {
+                font-size: 20px;
+                color: var(--color-body);
+                margin: 0;
+                @media #{$sm-layout} {
+                    font-size: 16px;
+                }
+            }
+            &:before {
+                background-color: var(--color-primary);
+                opacity: 0;
+                visibility: hidden;
+                transform: scale(.8);
+                transition: .3s;
+            }
+            &:hover {
+                border-color: var(--color-primary);
+                i {
+                    color: var(--color-white);
+
+                }
+                &:before {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: scale(1.2);
+                }
+            }
+        }
+        &.btn-size-md {
+            font-size: 14px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 30px 9px;
+            border-radius: 8px;
+            i {
+                font-size: 21px;
+            }
+        }
+    }
+}

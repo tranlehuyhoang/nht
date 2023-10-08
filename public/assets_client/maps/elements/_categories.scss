@@ -1,0 +1,137 @@
+/*-------------------------
+Categories 
+--------------------------*/
+.categrie-product {
+    min-width: 120px;
+    position: relative;
+    text-align: center;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.04);
+    transition: .5s ease-in-out;
+    z-index: 1;
+    margin-top: 30px;
+    &:before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-color: var(--color-white);
+        border: 1px solid #f0f0f0;
+        border-radius: 4px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        transition: transform .5s cubic-bezier(.165,.84,.44,1);
+    }
+    a {
+        padding: 28px 12px;
+        display: block;
+    }
+    img {
+        margin: 0 auto 8px;
+        min-height: 41px;
+    }
+    .cat-title {
+        margin-bottom: 0;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &:hover {
+        border-color: var(--color-white);
+        box-shadow: 0 20px 20px -10px rgba(0, 0, 0, .1);
+        
+        &:before {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.categrie-product-2 {
+    border: 1px solid #f0f0f0;
+    position: relative;
+    text-align: center;
+    border-radius: 6px;
+    transition: 0.3s;
+    box-shadow: var(--shadow-dark);
+    margin-bottom: 30px;
+    a {
+        padding: 17px 10px;
+        display: flex;
+        justify-content: center;
+    }
+  
+    img {
+        margin-right: 10px;
+        max-height: 24px;
+    }
+    .cat-title {
+        margin-bottom: 0;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &:hover {
+        background: #fff;
+        box-shadow: none;
+    }
+}
+
+.categrie-product-3 {
+    border: 1px solid #f0f0f0;
+    &:before {
+        display: none;
+    }
+    a {
+        padding: 12px 12px;
+        img {
+            border-radius: 4px;
+            width: 100%;
+        }
+    }
+}
+
+.categrie-product-4 {
+    box-shadow: none;
+    margin-top: 0;
+    &:before {
+        display: none;
+    }
+    .cate-thumb {
+        padding: 0;
+        img {
+            min-height: auto;
+            margin: 0 auto;
+        }
+    }
+    .cat-title {
+        margin-top: 16px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+.categorie-product-two {
+    .slick-arrow {
+        display: none !important;
+    }
+}
+
+.axil-categorie-area {
+    .section-title-wrapper {
+        margin-bottom: 10px;
+        .title {
+            margin-bottom: 0;
+        }
+        @media #{$sm-layout} {
+            margin-bottom: 0;
+        }
+    }
+    .arrow-top-slide .slide-arrow {
+        top: -60px;
+    }
+}

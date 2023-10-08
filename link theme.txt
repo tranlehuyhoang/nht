@@ -1,0 +1,3 @@
+admin: https://www.nobleui.com/html/template/demo2/dashboard.html
+
+web: https://www.nobleui.com/html/template/demo2/dashboard.html

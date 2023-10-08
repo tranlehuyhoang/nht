@@ -1,0 +1,127 @@
+/*----------------------------
+Blog Single  
+----------------------------*/
+.axil-single-post {
+    .post-content {
+        padding: 0 75px;
+        @media #{$smlg-device} {
+            padding: 0;
+        }
+    }
+    &.post-formate {
+        .content-block {
+            .post-thumbnail img {
+                border-radius: 6px;
+            }
+        }
+    }
+    &.post-video {
+        .format-video {
+            .thumbnail {
+                padding-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.post-single-wrapper {
+    padding-top: 80px;
+    @media only screen and (max-width: 991px) {
+        padding-top: 30px;
+    }
+    .content-blog {
+        border-top: none;
+        padding-top: 0;
+    }
+}
+
+.axil-post-wrapper {
+    .audio-player {
+        margin-bottom: 20px;
+        audio {
+            width: 100%;
+        }
+    }
+    .post-heading {
+        border-bottom: 1px solid var(--color-border-light);
+        margin-bottom: 45px;
+        padding-bottom: 30px;
+    }
+}
+
+
+.axil-single-widget:first-child,
+.widget-sidebar:first-child {
+    margin-top: 0 !important;
+}
+
+.newsletter-inner {
+    &::before {
+        content: "";
+        position: absolute;
+        left: 30px;
+        background: url(../images/send-mail.png) no-repeat;
+        z-index: 2;
+        top: 17px;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.wp-block-columns {
+    display: flex;
+    margin-bottom: 28px;
+    margin: 0 -15px;
+    @media #{$sm-layout} {
+        flex-wrap: wrap;
+    }
+}
+
+.wp-block-column {
+    flex-grow: 1;
+    min-width: 0;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    padding-right: 15px;
+    padding-left: 15px;
+    .wp-block-image {
+        img {
+            border-radius: 6px;
+        }
+    }
+}
+
+.post-details figure,
+.entry-content figure {
+    margin-bottom: 40px;
+    @media #{$large-mobile} {
+        margin-bottom: 20px;
+    }
+}
+
+.post-details__social-share {
+    .share-on-text {
+        display: inline-block;
+        margin-bottom: 10px;
+        margin-right: -5px;
+        @media #{$smlg-device} {
+            margin-right: -18px;
+        }
+    }
+    .social-share {
+        flex-direction: column;
+        align-items: center;
+        @media only screen and (max-width: 992px) {
+            flex-direction: row;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.sticky-top {
+    z-index: 0 !important;
+    top: 100px;
+}
+
+

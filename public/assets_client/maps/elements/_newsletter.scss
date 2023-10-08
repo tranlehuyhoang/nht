@@ -1,0 +1,65 @@
+/*-------------------------
+Newsletter  
+--------------------------*/
+.etrade-newsletter-wrapper{
+  padding: 100px 107px 85px;
+  border-radius: 6px;
+  @media #{$smlg-device} {
+    padding: 80px 30px 65px;
+  }
+
+  @media #{$sm-layout} {
+    padding: 60px 20px 45px;
+  }
+  
+}
+.newsletter-content {
+  .title {
+    @media #{$large-mobile} {
+      letter-spacing: -0.045em;
+      font-size: 30px;
+
+    }
+  }
+}
+.newsletter-form{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  @media #{$sm-layout} {
+    display: block;
+  }
+  button{
+    width: auto;
+    border-radius: 6px !important;
+    background-color: var(--color-heading);
+    color: var(--color-white);
+    padding: 16px 38px 17px;
+    &:before {
+      background-color: var(--color-heading);
+    }
+    &:hover {
+      background-color: var(--color-secondary);
+    }
+    @media #{$sm-layout} {
+      padding: 16px 35px;
+    }
+  }
+}
+.newsletter-inner{
+  margin-right: 20px;
+  @media #{$sm-layout} {
+    margin-right: 0;
+  }
+  input{
+    padding-left: 66px;
+    width: 390px;
+  }
+}
+.send-mail-icon {
+  position: absolute;
+  max-width: 100%;
+  top: 17px;
+  left: 30px;
+}
+

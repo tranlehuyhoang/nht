@@ -1,0 +1,43 @@
+/*-------------------------
+Privacy Policy
+--------------------------*/
+.axil-privacy-policy {
+	.policy-published {
+		font-size: 22px;
+		font-weight: var(--s-medium);
+		color: var(--color-dark);
+		position: relative;
+		padding-bottom: 20px;
+		margin-bottom: 70px;
+		display: inline-block;
+		&:after {
+			content: "";
+			height: 3px;
+			width: 100%;
+			background-color: var(--color-primary);
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+	.title {
+		margin-bottom: 20px;
+		color: var(--color-dark);
+		font-weight: var(--s-medium);
+	}
+
+	a {
+		color: var(--color-primary);
+	}
+	ul {
+		list-style: disc;
+		margin-bottom: 45px;
+		li {
+			margin: 0 0 12px 0;
+			&::marker {
+				color: var(--color-light);
+			}
+		}
+	}
+}

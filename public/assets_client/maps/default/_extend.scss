@@ -1,0 +1,44 @@
+/*----------------------
+Extend 
+-----------------------*/
+// Others 
+
+%box-shadow {
+    box-shadow: var(--shadow-primary);
+}
+
+%radius {
+    border-radius: var(--radius);
+}
+
+.radius {
+    @extend %radius;
+}
+
+
+/*=============== Style Css =============*/
+
+%liststyle {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.liststyle {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+%transition {
+    transition: var(--transition);
+}
+
+%bgImagePosition {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bgImagePosition {
+    @extend %bgImagePosition;
+}

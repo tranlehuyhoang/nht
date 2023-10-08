@@ -1,0 +1,40 @@
+/*-------------------------
+Social Share
+--------------------------*/
+
+.social-share {
+    @extend %liststyle;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+    a {
+        margin: 10px;
+        color:var(--color-body);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        transition: 0.3s;
+        position: relative;
+        z-index: 1;
+        &:after {
+            content: "";
+            height: 40px;
+            width: 40px;
+            background-color: var(--color-secondary);
+            transform: scale(0);
+            border-radius: 50%;
+            position: absolute;
+            z-index: -1;
+            transition: var(--transition);
+        }
+        &:hover {
+            color: var(--color-white);
+            &:after {
+                transform: scale(1);
+            }
+        }
+        
+    }
+}
+

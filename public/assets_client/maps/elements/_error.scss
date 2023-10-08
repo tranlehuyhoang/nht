@@ -1,0 +1,107 @@
+/*-------------------------
+    404 Error
+-------------------------*/
+.onepage-screen-area {
+    position: relative;
+    z-index: 1;
+    background: var(--gradient-primary);
+    min-height: 500px;
+    padding: 100px 0;
+    @media #{$md-layout} {
+        text-align: center;
+        padding: 80px 0;
+    }
+    @media #{$sm-layout} {
+        text-align: center;
+        padding: 60px 0;
+    }
+    .content {
+        padding-right: 100px;
+        @media only screen and (max-width: 991px) {
+            padding-right: 0;
+            margin-bottom: 50px;
+        }
+        .title {
+            margin-bottom: 30px;
+        }
+        @media only screen and (max-width: 991px) {
+            .title-highlighter {
+                justify-content: center;
+            }
+        }
+        p {
+            margin-bottom: 45px;
+        }
+     
+      
+    }
+}
+
+
+.comming-soon-area {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+    @media only screen and (max-width: 991px) {
+        padding: 60px 15px;
+    }
+}
+
+.comming-soon-banner {
+	min-height: 100vh;
+	height: 100vh;
+	padding: 100px 50px;
+	@media #{$lg-layout} {
+		margin-right: 50px;
+	}
+	@media only screen and (max-width: 991px) {
+		display: none;	
+	}
+}
+
+.comming-soon-content {
+    text-align: center;
+    .brand-logo {
+        margin-bottom: 30px;
+    }
+    .title {
+        margin-bottom: 15px;
+    }
+    .countdown {
+        margin-bottom: 50px;
+        justify-content: center;
+        @media #{$smlg-device} {
+        }
+        .countdown-section {
+            box-shadow: 0 8px 16px 0 rgba(53, 119, 240, .3);
+            height: 100px;
+            width: 100px;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            @media #{$large-mobile} {
+                height: 60px;
+                width: 60px;
+            }
+        }
+        .countdown-number {
+            font-size: 30px;
+            color: var(--color-white);
+            @media #{$large-mobile} {
+                font-size: 20px;
+            }
+        }
+    }
+    .newsletter-form {
+        justify-content: center;
+        input {
+            background-color: var(--color-lighter);
+            
+        }
+    }
+}
+

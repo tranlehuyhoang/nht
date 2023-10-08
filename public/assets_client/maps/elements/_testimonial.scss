@@ -1,0 +1,260 @@
+/*-------------------------
+Testimonial Style
+--------------------------*/
+.testimonial-style-one-wrapper {
+    .slide-arrow {
+        background-color: var(--color-white);
+    }
+    .slick-slide {
+        // transition: all .3s;
+    }
+    .slick-current.slick-active + .slick-active {
+        margin-top: 30px;
+    }
+}
+.testimonial-style-one {
+    .review-speech {
+        background-color: var(--color-white);
+        border-radius: 10px;
+        padding: 40px;
+        margin-bottom: 40px;
+        position: relative;
+        box-shadow: 0 16px 32px 0 rgba(0,0,0,.04);
+        &:after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 25px solid var(--color-white);
+            border-right: 50px solid transparent;
+            position: absolute;
+            bottom: -25px;
+            left: 100px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
+    .media {
+        display: flex;
+        align-items: center;
+        .thumbnail {
+            margin-right: 20px;
+            img {
+                border-radius: 6px;
+            }
+        }
+        .media-body {
+            flex: 1;
+            .designation {
+                font-size: 14px;
+            }
+            .title {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.testimonial-style-two-wrapper {
+    margin-bottom: 130px !important;
+    .thumbnail {
+        display: inline-block;
+        border-radius: 50%;
+        border: 2px solid var(--color-tertiary);
+        padding: 8px;
+        margin-bottom: 25px;
+        transition: var(--transition);
+        position: relative;
+        z-index: 1;
+        margin: 6px;
+        &:before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            background-color: var(--color-white);
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            transform: scale(1);
+            transition: .3s;
+        }
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    .thumb-content {
+        .item-title {
+            margin-bottom: 16px;
+        }
+        p {
+            font-size: 24px;
+            color: #292930;
+            @media #{$sm-layout} {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .slick-single-layout {
+        &:hover {
+            .thumbnail {
+                &:before {
+                    transform: scale(1.2);
+                }
+                background-color: var(--color-tertiary);
+            }
+        }
+    }
+}
+
+
+.testimonial-container-box {
+    background-color: var(--color-lighter);
+    border-radius: 8px;
+}
+.testimonial-video-box {
+    position: relative;
+    margin-right: 22px;
+    height: 100%;
+    @media (max-width: 991px) {
+        margin-right: 0;
+    }
+    .thumbnail {
+        height: 100%;
+        img {
+            border-radius: 8px 0 0 8px;
+            height: 100%;
+            object-fit: cover;
+            @media (max-width: 991px) {
+               border-radius: 0;
+            }
+        }
+    }
+    .play-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        text-align: center;
+        a {
+            height: 110px;
+            width: 110px;
+            line-height: 110px;
+            border-radius: 50%;
+            background-color: var(--color-secondary);
+            display: inline-block;
+            font-size: 28px;
+            color: var(--color-white);
+            transition: 0.3s;
+            &:hover {
+                background-color: var(--color-primary);
+            }
+        }
+    }
+}
+
+.testimonial-style-three-wrapper {
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;    
+    position: relative;
+    height: 100%;
+    @media (max-width: 1199px) {
+        padding-left: 0;
+    }
+    @media (max-width: 991px) {
+        padding-left: 50px;
+        padding-top: 80px;
+    }
+    @media (max-width: 767px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .heading-title {
+        position: relative;
+        margin-bottom: 45px;
+        z-index: 1;
+        &:before {
+            content: url("../../assets/images/testimonial/quote-left.png");
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: -58px;
+            left: -68px;
+            z-index: -1;
+            @media (max-width: 1199px) {
+                left: 0;
+            }
+        }
+        .title {
+            font-size: 48px;
+            font-weight: 700;
+            @media (max-width: 767px) {
+                font-size: 34px;
+            }
+        }
+    }
+}
+
+.testimonial-style-three {
+    p {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 45px;
+    }
+    .author-name {
+        margin-bottom: 0;
+    }
+    .author-desg {
+        font-size: 14px;
+    }
+}
+
+.testimonial-custom-nav {
+    padding-top: 94px;
+    padding-bottom: 40px;
+    @media (max-width: 991px) {
+        padding-top: 50px;
+    }
+    .slide-custom-nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 0 -12px;
+        button {
+            width: auto;
+            line-height: 1;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            color: var(--color-body);
+            background-color: transparent;
+            padding: 0 12px;
+            i {
+                margin-left: 8px;
+            }
+            &.prev-custom-nav {
+                border-right: 1px solid #D6D6D6;
+                i {
+                    margin-left: 0;
+                    margin-right: 8px;
+                }
+            }
+            &:hover {
+                color: var(--color-heading);
+            }
+        }
+    }
+
+    .slick-slide-count {
+        font-weight: 500;
+    }
+}

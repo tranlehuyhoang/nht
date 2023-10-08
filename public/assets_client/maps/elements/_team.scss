@@ -1,0 +1,53 @@
+/*-------------------------
+Team Style
+--------------------------*/
+.axil-team-area {
+	padding: 50px 0 55px;
+}
+.team-left-fullwidth {
+	margin-left: calc((100% - 1320px) / 2);
+    overflow: hidden;
+	@media only screen and (max-width: 1349px) {
+		margin-left: auto;
+		
+	}
+	.team-slide-activation {
+		.slick-list {
+			overflow: visible;
+			@media only screen and (max-width: 1349px) {
+				overflow: hidden;
+				
+			}
+		}
+	}
+}
+
+.axil-team-member {
+	@media #{$large-mobile} {
+		text-align: center;
+	}
+	.thumbnail {
+		margin-bottom: 12px;
+		overflow: hidden;
+		display: inline-block;
+		border-radius: 6px;
+		img {
+			border-radius: 6px;
+			transition: var(--transition);
+		}
+	}
+	.title {
+		color: #292930;
+		margin-bottom: 0;
+	}
+	.subtitle {
+		font-size: var(--font-size-b2);
+	}
+	&:hover {
+		.thumbnail {
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
+}

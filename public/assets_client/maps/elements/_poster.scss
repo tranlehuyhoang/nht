@@ -1,0 +1,254 @@
+/*-------------------------
+Poster
+--------------------------*/
+.single-poster {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    a {
+        display: block;
+        img {
+            transition: 0.5s;
+            width: 100%;
+        }
+    }
+    .poster-content {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: 2;
+        padding-right: 100px;
+        pointer-events: none;
+        @media #{$small-mobile} {
+            padding: 20px;
+        }
+        &.content-left {
+            right: auto;
+            left: 0;
+            padding-right: 0;
+            padding-left: 60px;
+            @media only screen and (max-width: 991px) {
+                padding-left: 30px;
+            }
+            .title {
+                margin-bottom: 0;
+                margin-top: 8px;
+            }
+            .sub-title {
+                color: rgba(255, 255, 255, .6);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+    .inner {
+        .title {
+            line-height: 1;
+            margin-bottom: 20px;
+            font-size: 40px;
+            color: var(--color-white);
+            @media #{$sm-layout} {
+               font-size: 30px;
+            }
+            @media #{$large-mobile} {
+               font-size: 22px;
+            }
+            @media #{$small-mobile} {
+                margin-bottom: 10px;
+            }
+        }
+        .sub-title {    
+            font-size: 16px;
+            line-height: 24px;
+            position: relative;
+            color: rgba(255, 255, 255, .4);
+            transition: all 0.3s ease-in-out;
+            i {
+                vertical-align: middle;
+                margin-left: 10px;
+            }
+        }
+    }
+    &:hover {
+        img {
+            transform: scale(1.1);
+            @media #{$large-mobile} {
+                transform: scale(1.25);
+            }
+        }
+        .poster-content {
+            .sub-title {
+                color: var(--color-white);
+            }
+        }
+    }
+}
+
+.poster-countdown-wrap {
+    padding: 65px 80px;
+    border-radius: 6px;
+    margin-top: 95px;
+    @media #{$smlg-device} {
+        margin-top: 0;
+    }
+    @media only screen and (max-width: 991px) {
+        text-align: center;
+        .poster-countdown {
+            justify-content: center;
+        }  
+    }
+    @media #{$sm-layout} {
+        padding: 50px 30px;
+    }
+    @media #{$small-mobile} {
+        padding: 40px 15px;
+    }
+
+    .section-title-wrapper {
+        margin-bottom: 0;
+        padding-right: 0;
+        .title {
+            font-size: 48px;
+            @media #{$smlg-device} {
+                font-size: 40px;
+            }
+            @media #{$sm-layout} {
+                font-size: 28px;
+            }
+
+        }
+        .title-highlighter {
+            @media only screen and (max-width: 991px) {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.poster-countdown-thumbnail {
+    text-align: center;
+    margin-top: -160px;
+    position: relative;
+    @media #{$smlg-device} {
+        margin-top: 0;
+    }
+    @media only screen and (max-width: 991px) {
+        margin-top: 50px;  
+    }
+}
+
+.music-singnal {
+    display: block;
+    position: absolute;
+    top: 48%;
+    left: 45%;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-95deg);
+    @media #{$lg-layout} {
+        top: 44%;
+        left: 40%;
+    } 
+    @media #{$large-mobile} {
+        display: none;
+    }
+
+    .item-circle {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-color: var(--color-chart03);
+        border-style: solid;
+        border-width: 1px 4px 0 0;
+        border-radius: 0 100% 0 0;
+        opacity: 0;
+        animation: signalanimation 2s infinite;
+
+        &.circle-1 {
+            animation-delay: 800ms;
+        }
+        &.circle-2 {
+            width: 80px;
+            height: 80px;
+            animation-delay: 600ms;
+        }
+        &.circle-3 {
+            width: 60px;
+            height: 60px;
+            animation-delay: 400ms;
+        }
+        &.circle-4 {
+            width: 40px;
+            height: 40px;
+            animation-delay: 200ms;
+        }
+        &.circle-5 {
+            width: 20px;
+            height: 20px;
+            animation-delay: 0ms;
+        }
+    }
+}
+
+// Sale Banner 
+.sale-banner-thumb {
+    img {
+        border-radius: 8px;
+    }
+}
+
+
+// Delivery Poster
+.delivery-poster-area {
+    padding-bottom: 50px;
+}
+.delivery-poster {
+    display: flex;
+    background: linear-gradient(97.29deg, #FFFFFF -1.43%, rgba(230, 222, 255, 0.634676) 43.99%, rgba(242, 238, 255, 0) 111.12%);
+    border: 3px solid #EAE3FF;
+    border-radius: 8px;
+    padding: 30px 70px 12px 30px;
+    margin-bottom: 30px;
+    @media (max-width: 575px) {
+        padding: 30px;
+    }
+    .content {
+        flex: 1;
+        padding-right: 50px;
+        @media (max-width: 575px) {
+            padding-right: 0;
+        }
+        .badge {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--color-white);
+            background-color: var(--color-secondary);
+            padding: 8px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            text-transform: uppercase;
+            margin-bottom: 34px;
+        }
+        .title {
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 8px;
+        }
+        p {
+            margin-bottom: 0;
+            color: var(--color-heading);
+        }
+    }
+    .thumbnail {
+        @media (max-width: 575px) {
+            display: none;
+        }
+    }
+    &.delivery {
+        background: linear-gradient(97.29deg, #FFFFFF -1.43%, rgba(255, 224, 222, 0.64) 43.99%, rgba(242, 238, 255, 0) 111.12%);
+        
+    }
+}

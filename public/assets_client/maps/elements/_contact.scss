@@ -1,0 +1,44 @@
+/*-------------------------
+ Contact 
+--------------------------*/
+#gmap_canvas {
+	width: 100%;
+	border-radius: 6px;
+	border: none;
+}
+.axil-contact-page {
+	.title {
+		font-weight: var(--s-medium);
+		color: var(--color-black);
+	}
+	.contact-form {
+		@media only screen and (max-width: 991px) {
+			margin-bottom: 50px;	
+		}
+		p {
+			width: 80%;
+			margin-bottom: 45px;
+		}
+	}
+	.form-group {
+		label {
+			span {
+				color: 	var(--color-chart03);
+			}
+		}
+		input {
+			height: 60px;
+		}
+		.axil-btn {
+			width: auto;
+		}
+	}
+	.contact-location {
+		span {
+			display: block;
+			@media #{$sm-layout} {
+				font-size: var(--font-size-b2);
+			}
+		}
+	}
+}

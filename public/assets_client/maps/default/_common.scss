@@ -1,0 +1,104 @@
+/*----------------------
+Common Style 
+-----------------------*/
+
+/* Theme Gradient */
+
+%axil-gradient {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+
+
+.bg-gradient-1 {
+    background-image: radial-gradient(134.22% 147.34% at -14.53% -24.7%, #FFFFFF 0%, #FEEBED 100%);
+}
+
+.bg-gradient-2 {
+    background: radial-gradient(77.67% 226.43% at 30.03% 4.61%, #FFFFFF 0%, #F1E6FF 100%);
+
+}
+
+.bg-gradient-3 {
+    background: radial-gradient(119.73% 312.23% at 62.29% -39.18%, #FFFFFF 0%, #F0E6FF 100%);
+}
+
+.bg-gradient-4 {
+   	background-image: radial-gradient(115.16% 203.59% at 65.89% 10.39%, #FFFFFF 0%, #FEEBED 100%);
+}
+
+.bg-gradient-5 {
+    background-image: radial-gradient(106.12% 118.09% at 67.29% -3.46%, #FFFFFF 0%, #FEEBED 100%);
+}
+
+.bg-gradient-6 {
+    background-image: radial-gradient(53.86% 87.31% at 67.29% -3.46%, #FFFFFF 0%, #FEEBED 100%);
+}
+
+.bg-gradient-7 {
+    background-image: radial-gradient(95.25% 95.25% at 50% 4.75%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.bg-gradient-8 {
+    background: radial-gradient(171.05% 478.76% at 62.29% -39.18%, #FFFFFF 0%, #F0E6FF 100%);
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+.bg-tertiary {
+    background-color: var(--color-tertiary);
+}
+
+.bg-tertiary-2 {
+    background-color: #FFECEE;
+}
+
+.bg-lightest {
+    background-color: var(--color-lightest);
+}
+.bg-lighter {
+    background-color: var(--color-lighter);
+}
+
+.bg-vista-white {
+    background-color: #f9f3f0;
+}
+.bg-wild-sand {
+    background-color: #f6f6f6;
+}
+
+.primary-color {
+    color: var(--color-primary);
+}
+
+.secondary-color {
+    color: var(--color-secondary);
+}
+
+.tertiary-color {
+    color: var(--color-tertiary);
+}
+
+.black-color {
+    color: var(--color-black);
+}
+
+.white-color {
+    color: var(--color-white);
+}
+
+.heading-color {
+    color: var(--color-heading);
+}
+
+.d-flex-center {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.overflow-md-visible {
+    @media only screen and (min-width: 992px) {
+        overflow: visible !important;
+    }
+}
