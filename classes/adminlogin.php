@@ -53,6 +53,7 @@ class adminlogin
         unset($_SESSION['adminEmail']);
         unset($_SESSION['adminId']);
         unset($_SESSION['adminName']);
+        header("Location: ./home.php");
     }
 }
 

@@ -34,6 +34,56 @@ _Hasync.push(['Histats.track_hits', '']);
 <!-- Histats.com  END  -->
 <!-- Histats.com  END  -->
 <!-- Start Footer Area  -->
+<div class="service-area">
+    <div class="container">
+        <div class="row row-cols-xl-4 row-cols-sm-2 row-cols-1 row--20">
+            <div class="col">
+                <div class="service-box service-style-2">
+                    <div class="icon">
+                        <img src="./public/assets_client/images/icons/service1.png" alt="Service">
+                    </div>
+                    <div class="content">
+                        <h6 class="title">Fast &amp; Secure Delivery</h6>
+                        <p>Tell about your service.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="service-box service-style-2">
+                    <div class="icon">
+                        <img src="./public/assets_client/images/icons/service2.png" alt="Service">
+                    </div>
+                    <div class="content">
+                        <h6 class="title">Money Back Guarantee</h6>
+                        <p>Within 10 days.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="service-box service-style-2">
+                    <div class="icon">
+                        <img src="./public/assets_client/images/icons/service3.png" alt="Service">
+                    </div>
+                    <div class="content">
+                        <h6 class="title">24 Hour Return Policy</h6>
+                        <p>No question ask.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="service-box service-style-2">
+                    <div class="icon">
+                        <img src="./public/assets_client/images/icons/service4.png" alt="Service">
+                    </div>
+                    <div class="content">
+                        <h6 class="title">Pro Quality Support</h6>
+                        <p>24/7 Live support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <footer class="axil-footer-area footer-style-1 footer-dark">
     <!-- Start Footer Top Area  -->
     <div class="footer-top">
@@ -44,7 +94,7 @@ _Hasync.push(['Histats.track_hits', '']);
                     <div class="axil-footer-widget">
                         <div class="logo mb--30">
                             <a href="index.php">
-                                <img class="light-logo" src="../public/assets_client/images/logo/logo-light.png"
+                                <img class="light-logo" src="./public/assets_client/images/logo/logo-light.png"
                                     alt="Logo Images" />
                             </a>
                         </div>
@@ -165,19 +215,19 @@ _Hasync.push(['Histats.track_hits', '']);
                         <span class="card-text">Accept For</span>
                         <ul class="payment-icons-bottom quick-link">
                             <li>
-                                <img src="../public/assets_client/images/icons/cart/cart-1.png" alt="paypal cart" />
+                                <img src="./public/assets_client/images/icons/cart/cart-1.png" alt="paypal cart" />
                             </li>
                             <li>
-                                <img src="../public/assets_client/images/icons/cart/cart-2.png" alt="paypal cart" />
+                                <img src="./public/assets_client/images/icons/cart/cart-2.png" alt="paypal cart" />
                             </li>
                             <li>
-                                <img src="../public/assets_client/images/icons/cart/cart-3.png" alt="paypal cart" />
+                                <img src="./public/assets_client/images/icons/cart/cart-3.png" alt="paypal cart" />
                             </li>
                             <li>
-                                <img src="../public/assets_client/images/icons/cart/cart-6.png" alt="paypal cart" />
+                                <img src="./public/assets_client/images/icons/cart/cart-6.png" alt="paypal cart" />
                             </li>
                             <li>
-                                <img src="../public/assets_client/images/icons/cart/cart-5.png" alt="paypal cart" />
+                                <img src="./public/assets_client/images/icons/cart/cart-5.png" alt="paypal cart" />
                             </li>
                         </ul>
                     </div>
@@ -187,3 +237,31 @@ _Hasync.push(['Histats.track_hits', '']);
     </div>
     <!-- End Copyright Area  -->
 </footer>
+<!-- JS
+============================================ -->
+<!-- Modernizer JS -->
+<script src="./public/assets_client/js/vendor/modernizr.min.js"></script>
+<!-- jQuery JS -->
+<script src="./public/assets_client/js/vendor/jquery.js"></script>
+<!-- Bootstrap JS -->
+<script src="./public/assets_client/js/vendor/popper.min.js"></script>
+<script src="./public/assets_client/js/vendor/bootstrap.min.js"></script>
+<script src="./public/assets_client/js/vendor/slick.min.js"></script>
+<script src="./public/assets_client/js/vendor/js.cookie.js"></script>
+<!-- <script src="./public/assets_client/js/vendor/jquery.style.switcher.js"></script> -->
+<script src="./public/assets_client/js/vendor/jquery-ui.min.js"></script>
+<script src="./public/assets_client/js/vendor/jquery.ui.touch-punch.min.js"></script>
+<script src="./public/assets_client/js/vendor/jquery.countdown.min.js"></script>
+<script src="./public/assets_client/js/vendor/sal.js"></script>
+<script src="./public/assets_client/js/vendor/jquery.magnific-popup.min.js"></script>
+<script src="./public/assets_client/js/vendor/imagesloaded.pkgd.min.js"></script>
+<script src="./public/assets_client/js/vendor/isotope.pkgd.min.js"></script>
+<script src="./public/assets_client/js/vendor/counterup.js"></script>
+<script src="./public/assets_client/js/vendor/waypoints.min.js"></script>
+
+<!-- Main JS -->
+<script src="./public/assets_client/js/main.js"></script>
+
+</body>
+
+</html>

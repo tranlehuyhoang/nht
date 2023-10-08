@@ -1,12 +1,13 @@
 <title>Home - PS27199</title>
 <?php
-include '../inc/head.php';
-?>
 
+include_once __DIR__ . '/../inc/_header.client.inc.php';
+?>
 
 <main class="main-wrapper">
     <!-- Start Slider Area -->
-    <div class="axil-main-slider-area main-slider-style-3">
+    <div class="axil-main-slider-area main-slider-style-3"
+        style="background-image: url(./public/assets_client/images/bg/bg-image-4.jpg);">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6">
@@ -15,8 +16,11 @@ include '../inc/head.php';
                             Discover, collect, and sell extraordinary NFTs
                         </h1>
                         <div class="shop-btn">
-                            <a href="page/shop.php" class="axil-btn btn-bg-white right-icon">Explore <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="20" height="20">
-                                    <path d="m18.541,10.894l-4.717-4.717-.707.707,4.616,4.617H5v1h12.735l-4.618,4.617.707.707,4.717-4.716c.296-.296.459-.69.459-1.108s-.163-.812-.459-1.106Z" />
+                            <a href="page/shop.php" class="axil-btn btn-bg-white right-icon">Explore <svg
+                                    xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
+                                    viewBox="0 0 24 24" width="20" height="20">
+                                    <path
+                                        d="m18.541,10.894l-4.717-4.717-.707.707,4.616,4.617H5v1h12.735l-4.618,4.617.707.707,4.717-4.716c.296-.296.459-.69.459-1.108s-.163-.812-.459-1.106Z" />
                                 </svg></a>
                         </div>
                     </div>
@@ -25,209 +29,7 @@ include '../inc/head.php';
             </div>
         </div>
     </div>
-    <!-- End Slider Area -->
 
-    <!-- Start Most Sold Product Area  -->
-    <!-- <div class="axil-most-sold-product axil-section-gap pb--0">
-            <div class="container">
-                <div class="product-area pb--50">
-                    <div class="section-title-wrapper section-title-center">
-                        <h2 class="title">New Products</h2>
-                    </div>
-                    <div class="row row-cols-xl-3 row-cols-md-2 row-cols-1 row--15">
-                        <div class="col">
-                            <div class="axil-product-list product-list-style-2">
-                                <div class="thumbnail">
-                                    <a href="page/product-detail.php">
-                                        <img data-sal="zoom-in" data-sal-delay="100" data-sal-duration="1500"
-                                            src="../public/assets_client/images/product/nft/product-18.jpg" alt="NFT" />
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <h6 class="product-title">
-                                        <a href="page/product-detail.php">Anime #2</a>
-                                    </h6>
-                                    <div class="product-price-variant">
-                                        <span class="price current-price">$5000</span>
-                                    </div>
-                                    <div class="product-cart">
-                                        <a href="page/product-detail.php" class="cart-btn">Buy Product</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="axil-product-list product-list-style-2">
-                                <div class="thumbnail">
-                                    <a href="page/product-detail.php">
-                                        <img data-sal="zoom-in" data-sal-delay="100" data-sal-duration="1500"
-                                            src="../public/assets_client/images/product/nft/product-22.jpg" alt="NFT" />
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <h6 class="product-title">
-                                        <a href="page/product-detail.php">Anime #2</a>
-                                    </h6>
-                                    <div class="product-price-variant">
-                                        <span class="price current-price">$7955</span>
-                                    </div>
-                                    <div class="product-cart">
-                                        <a href="page/product-detail.php" class="cart-btn">Buy Product</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="axil-product-list product-list-style-2">
-                                <div class="thumbnail">
-                                    <a href="page/product-detail.php">
-                                        <img data-sal="zoom-in" data-sal-delay="100" data-sal-duration="1500"
-                                            src="../public/assets_client/images/product/nft/product-19.jpg" alt="NFT" />
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <h6 class="product-title">
-                                        <a href="page/product-detail.php">Anime #2</a>
-                                    </h6>
-                                    <div class="product-price-variant">
-                                        <span class="price current-price">$2999</span>
-                                    </div>
-                                    <div class="product-cart">
-                                        <a href="page/product-detail.php" class="cart-btn">Buy Product</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="axil-product-list product-list-style-2">
-                                <div class="thumbnail">
-                                    <a href="page/product-detail.php">
-                                        <img data-sal="zoom-in" data-sal-delay="100" data-sal-duration="1500"
-                                            src="../public/assets_client/images/product/nft/product-23.jpg" alt="NFT" />
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <h6 class="product-title">
-                                        <a href="page/product-detail.php">Anime #2</a>
-                                    </h6>
-                                    <div class="product-price-variant">
-                                        <span class="price current-price">$5000</span>
-                                    </div>
-                                    <div class="product-cart">
-                                        <a href="page/product-detail.php" class="cart-btn">Buy Product</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="axil-product-list product-list-style-2">
-                                <div class="thumbnail">
-                                    <a href="page/product-detail.php">
-                                        <img data-sal="zoom-in" data-sal-delay="100" data-sal-duration="1500"
-                                            src="../public/assets_client/images/product/nft/product-20.jpg" alt="NFT" />
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <h6 class="product-title">
-                                        <a href="page/product-detail.php">Anime #201</a>
-                                    </h6>
-                                    <div class="product-price-variant">
-                                        <span class="price current-price">$7955</span>
-                                    </div>
-                                    <div class="product-cart">
-                                        <a href="page/product-detail.php" class="cart-btn">Buy Product</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="axil-product-list product-list-style-2">
-                                <div class="thumbnail">
-                                    <a href="page/product-detail.php">
-                                        <img data-sal="zoom-in" data-sal-delay="100" data-sal-duration="1500"
-                                            src="../public/assets_client/images/product/nft/product-24.jpg" alt="NFT" />
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <h6 class="product-title">
-                                        <a href="page/product-detail.php">Anime #2</a>
-                                    </h6>
-                                    <div class="product-price-variant">
-                                        <span class="price current-price">$2999</span>
-                                    </div>
-                                    <div class="product-cart">
-                                        <a href="page/product-detail.php" class="cart-btn">Buy Product</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="axil-product-list product-list-style-2">
-                                <div class="thumbnail">
-                                    <a href="page/product-detail.php">
-                                        <img data-sal="zoom-in" data-sal-delay="100" data-sal-duration="1500"
-                                            src="../public/assets_client/images/product/nft/product-28.jpg" alt="NFT" />
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <h6 class="product-title">
-                                        <a href="page/product-detail.php">Anime #2</a>
-                                    </h6>
-                                    <div class="product-price-variant">
-                                        <span class="price current-price">$5000</span>
-                                    </div>
-                                    <div class="product-cart">
-                                        <a href="page/product-detail.php" class="cart-btn">Buy Product</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="axil-product-list product-list-style-2">
-                                <div class="thumbnail">
-                                    <a href="page/product-detail.php">
-                                        <img data-sal="zoom-in" data-sal-delay="100" data-sal-duration="1500"
-                                            src="../public/assets_client/images/product/nft/product-25.jpg" alt="NFT" />
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <h6 class="product-title">
-                                        <a href="page/product-detail.php">Anime #2</a>
-                                    </h6>
-                                    <div class="product-price-variant">
-                                        <span class="price current-price">$7955</span>
-                                    </div>
-                                    <div class="product-cart">
-                                        <a href="page/product-detail.php" class="cart-btn">Buy Product</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="axil-product-list product-list-style-2">
-                                <div class="thumbnail">
-                                    <a href="page/product-detail.php">
-                                        <img data-sal="zoom-in" data-sal-delay="100" data-sal-duration="1500"
-                                            src="../public/assets_client/images/product/nft/product-26.jpg" alt="NFT" />
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <h6 class="product-title">
-                                        <a href="page/product-detail.php">Anime #2</a>
-                                    </h6>
-                                    <div class="product-price-variant">
-                                        <span class="price current-price">$2999</span>
-                                    </div>
-                                    <div class="product-cart">
-                                        <a href="page/product-detail.php" class="cart-btn">Buy Product</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
     <!-- End Most Sold Product Area  -->
 
     <!-- Start Why Choose Area  -->
@@ -241,7 +43,7 @@ include '../inc/head.php';
                     <div class="col">
                         <div class="service-box how-to-sell">
                             <div class="icon">
-                                <img src="../public/assets_client/images/icons/choose.png" alt="Service" />
+                                <img src="./public/assets_client/images/icons/choose.png" alt="Service" />
                             </div>
                             <h6 class="title">Choose Your Favourite</h6>
                             <p>
@@ -253,7 +55,7 @@ include '../inc/head.php';
                     <div class="col">
                         <div class="service-box how-to-sell">
                             <div class="icon">
-                                <img src="../public/assets_client/images/icons/protection.png" alt="Service" />
+                                <img src="./public/assets_client/images/icons/protection.png" alt="Service" />
                             </div>
                             <h6 class="title">Verify NFTs</h6>
                             <p>
@@ -265,7 +67,7 @@ include '../inc/head.php';
                     <div class="col">
                         <div class="service-box how-to-sell">
                             <div class="icon">
-                                <img src="../public/assets_client/images/icons/purchasing.png" alt="Service" />
+                                <img src="./public/assets_client/images/icons/purchasing.png" alt="Service" />
                             </div>
                             <h6 class="title">Purchase NFTS</h6>
                             <p>
@@ -277,7 +79,7 @@ include '../inc/head.php';
                     <div class="col">
                         <div class="service-box how-to-sell">
                             <div class="icon">
-                                <img src="../public/assets_client/images/icons/dancing.png" alt="Service" />
+                                <img src="./public/assets_client/images/icons/dancing.png" alt="Service" />
                             </div>
                             <h6 class="title">Enjoy!</h6>
                             <p>
@@ -302,7 +104,7 @@ include '../inc/head.php';
                         <div class="inner">
                             <div class="thumbnail">
                                 <a href="blog-details.php">
-                                    <img src="../public/assets_client/images/blog/blog-10.png" alt="Blog Images" />
+                                    <img src="./public/assets_client/images/blog/blog-10.png" alt="Blog Images" />
                                 </a>
                                 <div class="blog-category">
                                     <a href="#">Digital Art's</a>
@@ -313,8 +115,11 @@ include '../inc/head.php';
                                     <a href="blog-details.php">Keeping yourself safe when buying NFTs on eTrade</a>
                                 </h5>
                                 <div class="read-more-btn">
-                                    <a class="axil-btn right-icon" href="blog-details.php">Read More <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="20" height="20">
-                                            <path d="m18.541,10.894l-4.717-4.717-.707.707,4.616,4.617H5v1h12.735l-4.618,4.617.707.707,4.717-4.716c.296-.296.459-.69.459-1.108s-.163-.812-.459-1.106Z" />
+                                    <a class="axil-btn right-icon" href="blog-details.php">Read More <svg
+                                            xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
+                                            viewBox="0 0 24 24" width="20" height="20">
+                                            <path
+                                                d="m18.541,10.894l-4.717-4.717-.707.707,4.616,4.617H5v1h12.735l-4.618,4.617.707.707,4.717-4.716c.296-.296.459-.69.459-1.108s-.163-.812-.459-1.106Z" />
                                         </svg></a>
                                 </div>
                             </div>
@@ -326,7 +131,7 @@ include '../inc/head.php';
                         <div class="inner">
                             <div class="thumbnail">
                                 <a href="blog-details.php">
-                                    <img src="../public/assets_client/images/blog/blog-11.png" alt="Blog Images" />
+                                    <img src="./public/assets_client/images/blog/blog-11.png" alt="Blog Images" />
                                 </a>
                                 <div class="blog-category">
                                     <a href="#">Photography</a>
@@ -339,8 +144,11 @@ include '../inc/head.php';
                                 </h5>
 
                                 <div class="read-more-btn">
-                                    <a class="axil-btn right-icon" href="blog-details.php">Read More <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="20" height="20">
-                                            <path d="m18.541,10.894l-4.717-4.717-.707.707,4.616,4.617H5v1h12.735l-4.618,4.617.707.707,4.717-4.716c.296-.296.459-.69.459-1.108s-.163-.812-.459-1.106Z" />
+                                    <a class="axil-btn right-icon" href="blog-details.php">Read More <svg
+                                            xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
+                                            viewBox="0 0 24 24" width="20" height="20">
+                                            <path
+                                                d="m18.541,10.894l-4.717-4.717-.707.707,4.616,4.617H5v1h12.735l-4.618,4.617.707.707,4.717-4.716c.296-.296.459-.69.459-1.108s-.163-.812-.459-1.106Z" />
                                         </svg></a>
                                 </div>
                             </div>
@@ -352,7 +160,7 @@ include '../inc/head.php';
                         <div class="inner">
                             <div class="thumbnail">
                                 <a href="blog-details.php">
-                                    <img src="../public/assets_client/images/blog/blog-12.png" alt="Blog Images" />
+                                    <img src="./public/assets_client/images/blog/blog-12.png" alt="Blog Images" />
                                 </a>
                                 <div class="blog-category">
                                     <a href="#">Music</a>
@@ -365,8 +173,11 @@ include '../inc/head.php';
                                 </h5>
 
                                 <div class="read-more-btn">
-                                    <a class="axil-btn right-icon" href="blog-details.php">Read More <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="20" height="20">
-                                            <path d="m18.541,10.894l-4.717-4.717-.707.707,4.616,4.617H5v1h12.735l-4.618,4.617.707.707,4.717-4.716c.296-.296.459-.69.459-1.108s-.163-.812-.459-1.106Z" />
+                                    <a class="axil-btn right-icon" href="blog-details.php">Read More <svg
+                                            xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
+                                            viewBox="0 0 24 24" width="20" height="20">
+                                            <path
+                                                d="m18.541,10.894l-4.717-4.717-.707.707,4.616,4.617H5v1h12.735l-4.618,4.617.707.707,4.717-4.716c.296-.296.459-.69.459-1.108s-.163-.812-.459-1.106Z" />
                                         </svg></a>
                                 </div>
                             </div>
@@ -378,14 +189,6 @@ include '../inc/head.php';
     </div>
 </main>
 <?php
-include_once '../inc/histats.php';
-include_once '../inc/histats2.php';
+
+include_once __DIR__ . '/../inc/_footer.client.inc.php';
 ?>
-
-<?php include '../inc/service-area.php'; ?>
-<?php include '../inc/footer.php'; ?>
-
-<?php include '../inc/script.php'; ?>
-</body>
-
-</html>

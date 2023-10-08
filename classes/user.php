@@ -84,10 +84,11 @@ class user
             if ($result_check) {
                 $value = $result_check->fetch_assoc();
                 print_r($value);
-                // Session::set('user_login', true);
-                // Session::set('user_id', $value['userId']);
-                // Session::set('user_name', $value['userName']);
-                header("Location: ../index.php");
+                $_SESSION['user_login'] = true;
+                $_SESSION['user_id'] = $value['userId'];
+                $_SESSION['user_name'] = $value['userName'];
+
+                header("Location: ./home.php");
             } else {
                 $alert = "Lỗi";
                 return $alert;
@@ -121,6 +122,13 @@ class user
         $query = "SELECT * FROM table_user where userId = '$id'";
         $result = $this->db->select($query);
         return $result;
+    }
+    public function logout()
+    {
+        unset($_SESSION['user_login']);
+        unset($_SESSION['user_id']);
+        unset($_SESSION['user_name']);
+        echo "<script>location.href = './client/home.php';</script>";
     }
 }
 

@@ -1,290 +1,246 @@
 <title>My account - PS27199</title>
-
 <?php
-include "../inc/head.php";
+
+include_once __DIR__ . '/../inc/_header.client.inc.php';
+?>
+<?php
+
 if (!isset($_SESSION['user_login'])) {
-    echo "<script>location.href = 'page/home.php';</script>";
+    echo "<script>location.href = 'client/home.php';</script>";
 }
 if (isset($_GET['action']) && $_GET['action'] == 'logout') {
-    unset($_SESSION['user_login']);
-    unset($_SESSION['user_name']);
-    unset($_SESSION['user_id']);
-    echo "<script>location.href = 'page/home.php';</script>";
+    $user->logout();
+    // echo "<script>location.href = './client/home.php';</script>";
 }
 ?>
 
-
-<body class="sticky-header">
-
-    <?php include "../inc/header.php"; ?>
-
-    <main class="main-wrapper">
-        <!-- Start Breadcrumb Area  -->
-        <div class="axil-breadcrumb-area">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-8">
-                        <div class="inner">
-                            <h1 class="title">Explore All Products</h1>
-                        </div>
+<main class="main-wrapper">
+    <!-- Start Breadcrumb Area  -->
+    <div class="axil-breadcrumb-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-8">
+                    <div class="inner">
+                        <h1 class="title">Explore All Products</h1>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Breadcrumb Area  -->
+    </div>
+    <!-- End Breadcrumb Area  -->
 
-        <!-- Start My Account Area  -->
-        <div class="axil-dashboard-area axil-section-gap">
-            <div class="container">
-                <div class="axil-dashboard-warp">
-                    <div class="axil-dashboard-author">
-                        <div class="media">
-                            <div class="thumbnail">
-                                <img src="./assets/images/product/author1.png" alt="Hello Annie">
-                            </div>
-                            <div class="media-body">
+    <!-- Start My Account Area  -->
+    <div class="axil-dashboard-area axil-section-gap">
+        <div class="container">
+            <div class="axil-dashboard-warp">
+                <div class="axil-dashboard-author">
+                    <div class="media">
+                        <div class="thumbnail">
+                            <img src="./public/assets_client/images/product/author1.png" alt="Hello Annie">
+                        </div>
+                        <div class="media-body">
 
-                                <h5 class="title mb-0">Hello Annie</h5>
-                            </div>
+                            <h5 class="title mb-0">Hello Annie</h5>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-xl-3 col-md-4">
-                            <aside class="axil-dashboard-aside">
-                                <nav class="axil-dashboard-nav">
-                                    <div class="nav nav-tabs" role="tablist">
-                                        <a class="nav-item nav-link active" data-bs-toggle="tab" href="#nav-dashboard"
-                                            role="tab" aria-selected="true"><i><svg xmlns="http://www.w3.org/2000/svg"
-                                                    id="Layer_1" height="18" viewBox="0 0 24 24" width="18"
-                                                    data-name="Layer 1">
-                                                    <path
-                                                        d="m23.9 11.437a12 12 0 0 0 -23.9 1.563 11.878 11.878 0 0 0 3.759 8.712 4.84 4.84 0 0 0 3.354 1.288h9.767a4.994 4.994 0 0 0 3.509-1.429 11.944 11.944 0 0 0 3.511-10.134zm-16.428 8.224a1 1 0 0 1 -1.412.09 8.993 8.993 0 0 1 5.94-15.751 9.1 9.1 0 0 1 2.249.283 1 1 0 1 1 -.5 1.938 6.994 6.994 0 0 0 -6.367 12.028 1 1 0 0 1 .09 1.412zm4.528-4.661a2 2 0 1 1 .512-3.926l3.781-3.781a1 1 0 1 1 1.414 1.414l-3.781 3.781a1.976 1.976 0 0 1 -1.926 2.512zm5.94 4.751a1 1 0 0 1 -1.322-1.5 6.992 6.992 0 0 0 2.161-7 1 1 0 1 1 1.938-.5 9.094 9.094 0 0 1 .283 2.249 9 9 0 0 1 -3.06 6.751z" />
-                                                </svg></i>Dashboard</a>
-                                        <a class="nav-item nav-link" data-bs-toggle="tab" href="#nav-orders" role="tab"
-                                            aria-selected="false"><i><svg xmlns="http://www.w3.org/2000/svg" id="Filled"
-                                                    viewBox="0 0 24 24" width="18" height="18">
-                                                    <path
-                                                        d="M22.713,4.077A2.993,2.993,0,0,0,20.41,3H4.242L4.2,2.649A3,3,0,0,0,1.222,0H1A1,1,0,0,0,1,2h.222a1,1,0,0,1,.993.883l1.376,11.7A5,5,0,0,0,8.557,19H19a1,1,0,0,0,0-2H8.557a3,3,0,0,1-2.82-2h11.92a5,5,0,0,0,4.921-4.113l.785-4.354A2.994,2.994,0,0,0,22.713,4.077Z" />
-                                                    <circle cx="7" cy="22" r="2" />
-                                                    <circle cx="17" cy="22" r="2" />
-                                                </svg></i>Orders</a>
-                                        <a class="nav-item nav-link" data-bs-toggle="tab" href="#nav-downloads"
-                                            role="tab" aria-selected="false"><i><svg xmlns="http://www.w3.org/2000/svg"
-                                                    id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="18"
-                                                    height="18">
-                                                    <path
-                                                        d="M17.974,7.146c-.332-.066-.603-.273-.742-.569-1.552-3.271-5.143-5.1-8.735-4.438-3.272,.6-5.837,3.212-6.384,6.501-.162,.971-.15,1.943,.033,2.89,.06,.309-.073,.653-.346,.901-1.145,1.041-1.801,2.524-1.801,4.07,0,3.032,2.467,5.5,5.5,5.5h11c4.136,0,7.5-3.364,7.5-7.5,0-3.565-2.534-6.658-6.026-7.354Zm-2.853,7.562l-2.707,2.707c-.387,.387-.896,.582-1.405,.584l-.009,.002-.009-.002c-.509-.002-1.018-.197-1.405-.584l-2.707-2.707c-.391-.391-.391-1.023,0-1.414s1.023-.391,1.414,0l1.707,1.707v-5c0-.553,.448-1,1-1s1,.447,1,1v5l1.707-1.707c.391-.391,1.023-.391,1.414,0s.391,1.023,0,1.414Z" />
-                                                </svg></i>Downloads</a>
-                                        <a class="nav-item nav-link" data-bs-toggle="tab" href="#nav-address" role="tab"
-                                            aria-selected="false"><i><svg xmlns="http://www.w3.org/2000/svg"
-                                                    id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="18"
-                                                    height="18">
-                                                    <path
-                                                        d="M16.243,10.764a6,6,0,0,0-8.486,8.485l3.507,3.43a1.053,1.053,0,0,0,1.472,0l3.507-3.43A6,6,0,0,0,16.243,10.764ZM12,16.994a2,2,0,1,1,2-2A2,2,0,0,1,12,16.994Z" />
-                                                    <path
-                                                        d="M21.8,5.579,14.8.855A4.981,4.981,0,0,0,9.2.855l-7,4.724A4.993,4.993,0,0,0,0,9.724V19a5.006,5.006,0,0,0,5,5H9.754L6.359,20.679A8,8,0,1,1,17.657,9.35h0a8,8,0,0,1,0,11.313L14.245,24H19a5.006,5.006,0,0,0,5-5V9.724A5,5,0,0,0,21.8,5.579Z" />
-                                                </svg></i>Addresses</a>
-                                        <a class="nav-item nav-link" data-bs-toggle="tab" href="#nav-account" role="tab"
-                                            aria-selected="false"><i><svg xmlns="http://www.w3.org/2000/svg" id="Filled"
-                                                    viewBox="0 0 24 24" width="18" height="18">
-                                                    <path
-                                                        d="M19,0H5A5.006,5.006,0,0,0,0,5V19a5.006,5.006,0,0,0,5,5V21a7,7,0,0,1,14,0v3a5.006,5.006,0,0,0,5-5V5A5.006,5.006,0,0,0,19,0ZM12,12a4,4,0,1,1,4-4A4,4,0,0,1,12,12Z" />
-                                                    <circle cx="12" cy="8" r="2" />
-                                                    <path
-                                                        d="M12,16a5.006,5.006,0,0,0-5,5v3H17V21A5.006,5.006,0,0,0,12,16Z" />
-                                                </svg></i>Account Details</a>
-                                        <a class="nav-item nav-link" href="page/my-account.php?action=logout"><i><svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
-                                                    x="0px" y="0px" viewBox="0 0 512.292 512.292"
-                                                    style="enable-background:new 0 0 512.292 512.292;"
-                                                    xml:space="preserve" width="18" height="18">
-                                                    <g>
-                                                        <path
-                                                            d="M256.061,0L256.061,0c17.673,0,32,14.327,32,32v106.667c0,17.673-14.327,32-32,32l0,0c-17.673,0-32-14.327-32-32V32   C224.061,14.327,238.387,0,256.061,0z" />
-                                                        <path
-                                                            d="M330.727,105.387L330.727,105.387c-0.157,10.742,5.259,20.8,14.315,26.581c80.432,49.143,105.796,154.185,56.652,234.616   S247.51,472.38,167.078,423.237S61.282,269.052,110.426,188.62c14.042-22.982,33.324-42.315,56.269-56.418   c9.211-5.781,14.773-15.92,14.699-26.795l0,0c0.049-17.673-14.238-32.039-31.911-32.088c-6.07-0.017-12.02,1.693-17.155,4.931   C22.233,146.634-11.58,291.318,56.803,401.412s213.067,143.907,323.161,75.524s143.907-213.067,75.524-323.161   c-19.035-30.645-44.879-56.489-75.524-75.524c-14.997-9.461-34.824-4.973-44.285,10.024   C332.447,93.397,330.731,99.33,330.727,105.387z" />
-                                                    </g>
-                                                </svg></i>Logout</a>
-                                    </div>
-                                </nav>
-                            </aside>
-                        </div>
-                        <div class="col-xl-9 col-md-8">
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="nav-dashboard" role="tabpanel">
-                                    <div class="axil-dashboard-overview">
-                                        <div class="welcome-text">Hello Annie (not <span>Annie?</span> <a
-                                                href="page/my-account.php?action=logout">Log Out</a>)</div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-md-4">
+                        <aside class="axil-dashboard-aside">
+                            <nav class="axil-dashboard-nav">
+                                <div class="nav nav-tabs" role="tablist">
+                                    <a class="nav-item nav-link active" data-bs-toggle="tab" href="#nav-dashboard" role="tab" aria-selected="true"><i><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" height="18" viewBox="0 0 24 24" width="18" data-name="Layer 1">
+                                                <path d="m23.9 11.437a12 12 0 0 0 -23.9 1.563 11.878 11.878 0 0 0 3.759 8.712 4.84 4.84 0 0 0 3.354 1.288h9.767a4.994 4.994 0 0 0 3.509-1.429 11.944 11.944 0 0 0 3.511-10.134zm-16.428 8.224a1 1 0 0 1 -1.412.09 8.993 8.993 0 0 1 5.94-15.751 9.1 9.1 0 0 1 2.249.283 1 1 0 1 1 -.5 1.938 6.994 6.994 0 0 0 -6.367 12.028 1 1 0 0 1 .09 1.412zm4.528-4.661a2 2 0 1 1 .512-3.926l3.781-3.781a1 1 0 1 1 1.414 1.414l-3.781 3.781a1.976 1.976 0 0 1 -1.926 2.512zm5.94 4.751a1 1 0 0 1 -1.322-1.5 6.992 6.992 0 0 0 2.161-7 1 1 0 1 1 1.938-.5 9.094 9.094 0 0 1 .283 2.249 9 9 0 0 1 -3.06 6.751z" />
+                                            </svg></i>Dashboard</a>
+                                    <a class="nav-item nav-link" data-bs-toggle="tab" href="#nav-orders" role="tab" aria-selected="false"><i><svg xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width="18" height="18">
+                                                <path d="M22.713,4.077A2.993,2.993,0,0,0,20.41,3H4.242L4.2,2.649A3,3,0,0,0,1.222,0H1A1,1,0,0,0,1,2h.222a1,1,0,0,1,.993.883l1.376,11.7A5,5,0,0,0,8.557,19H19a1,1,0,0,0,0-2H8.557a3,3,0,0,1-2.82-2h11.92a5,5,0,0,0,4.921-4.113l.785-4.354A2.994,2.994,0,0,0,22.713,4.077Z" />
+                                                <circle cx="7" cy="22" r="2" />
+                                                <circle cx="17" cy="22" r="2" />
+                                            </svg></i>Orders</a>
+                                    <a class="nav-item nav-link" data-bs-toggle="tab" href="#nav-downloads" role="tab" aria-selected="false"><i><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="18" height="18">
+                                                <path d="M17.974,7.146c-.332-.066-.603-.273-.742-.569-1.552-3.271-5.143-5.1-8.735-4.438-3.272,.6-5.837,3.212-6.384,6.501-.162,.971-.15,1.943,.033,2.89,.06,.309-.073,.653-.346,.901-1.145,1.041-1.801,2.524-1.801,4.07,0,3.032,2.467,5.5,5.5,5.5h11c4.136,0,7.5-3.364,7.5-7.5,0-3.565-2.534-6.658-6.026-7.354Zm-2.853,7.562l-2.707,2.707c-.387,.387-.896,.582-1.405,.584l-.009,.002-.009-.002c-.509-.002-1.018-.197-1.405-.584l-2.707-2.707c-.391-.391-.391-1.023,0-1.414s1.023-.391,1.414,0l1.707,1.707v-5c0-.553,.448-1,1-1s1,.447,1,1v5l1.707-1.707c.391-.391,1.023-.391,1.414,0s.391,1.023,0,1.414Z" />
+                                            </svg></i>Downloads</a>
+                                    <a class="nav-item nav-link" data-bs-toggle="tab" href="#nav-address" role="tab" aria-selected="false"><i><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="18" height="18">
+                                                <path d="M16.243,10.764a6,6,0,0,0-8.486,8.485l3.507,3.43a1.053,1.053,0,0,0,1.472,0l3.507-3.43A6,6,0,0,0,16.243,10.764ZM12,16.994a2,2,0,1,1,2-2A2,2,0,0,1,12,16.994Z" />
+                                                <path d="M21.8,5.579,14.8.855A4.981,4.981,0,0,0,9.2.855l-7,4.724A4.993,4.993,0,0,0,0,9.724V19a5.006,5.006,0,0,0,5,5H9.754L6.359,20.679A8,8,0,1,1,17.657,9.35h0a8,8,0,0,1,0,11.313L14.245,24H19a5.006,5.006,0,0,0,5-5V9.724A5,5,0,0,0,21.8,5.579Z" />
+                                            </svg></i>Addresses</a>
+                                    <a class="nav-item nav-link" data-bs-toggle="tab" href="#nav-account" role="tab" aria-selected="false"><i><svg xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width="18" height="18">
+                                                <path d="M19,0H5A5.006,5.006,0,0,0,0,5V19a5.006,5.006,0,0,0,5,5V21a7,7,0,0,1,14,0v3a5.006,5.006,0,0,0,5-5V5A5.006,5.006,0,0,0,19,0ZM12,12a4,4,0,1,1,4-4A4,4,0,0,1,12,12Z" />
+                                                <circle cx="12" cy="8" r="2" />
+                                                <path d="M12,16a5.006,5.006,0,0,0-5,5v3H17V21A5.006,5.006,0,0,0,12,16Z" />
+                                            </svg></i>Account Details</a>
+                                    <a class="nav-item nav-link" href="client/my-account.php?action=logout"><i><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.292 512.292" style="enable-background:new 0 0 512.292 512.292;" xml:space="preserve" width="18" height="18">
+                                                <g>
+                                                    <path d="M256.061,0L256.061,0c17.673,0,32,14.327,32,32v106.667c0,17.673-14.327,32-32,32l0,0c-17.673,0-32-14.327-32-32V32   C224.061,14.327,238.387,0,256.061,0z" />
+                                                    <path d="M330.727,105.387L330.727,105.387c-0.157,10.742,5.259,20.8,14.315,26.581c80.432,49.143,105.796,154.185,56.652,234.616   S247.51,472.38,167.078,423.237S61.282,269.052,110.426,188.62c14.042-22.982,33.324-42.315,56.269-56.418   c9.211-5.781,14.773-15.92,14.699-26.795l0,0c0.049-17.673-14.238-32.039-31.911-32.088c-6.07-0.017-12.02,1.693-17.155,4.931   C22.233,146.634-11.58,291.318,56.803,401.412s213.067,143.907,323.161,75.524s143.907-213.067,75.524-323.161   c-19.035-30.645-44.879-56.489-75.524-75.524c-14.997-9.461-34.824-4.973-44.285,10.024   C332.447,93.397,330.731,99.33,330.727,105.387z" />
+                                                </g>
+                                            </svg></i>Logout</a>
+                                </div>
+                            </nav>
+                        </aside>
+                    </div>
+                    <div class="col-xl-9 col-md-8">
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="nav-dashboard" role="tabpanel">
+                                <div class="axil-dashboard-overview">
+                                    <div class="welcome-text">Hello Annie (not <span>Annie?</span> <a href="client/my-account.php?action=logout">Log Out</a>)</div>
 
-                                        <p>From your account dashboard you can view your recent orders, manage your
-                                            shipping and billing addresses, and edit your password and account details.
-                                        </p>
+                                    <p>From your account dashboard you can view your recent orders, manage your
+                                        shipping and billing addresses, and edit your password and account details.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-orders" role="tabpanel">
+                                <div class="axil-dashboard-order">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Order</th>
+                                                    <th scope="col">Date</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Total</th>
+                                                    <th scope="col">Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">#6523</th>
+                                                    <td>September 10, 2020</td>
+                                                    <td>Processing</td>
+                                                    <td>$326.63 for 3 items</td>
+                                                    <td><a href="#" class="axil-btn view-btn">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">#6523</th>
+                                                    <td>September 10, 2020</td>
+                                                    <td>On Hold</td>
+                                                    <td>$326.63 for 3 items</td>
+                                                    <td><a href="#" class="axil-btn view-btn">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">#6523</th>
+                                                    <td>September 10, 2020</td>
+                                                    <td>Processing</td>
+                                                    <td>$326.63 for 3 items</td>
+                                                    <td><a href="#" class="axil-btn view-btn">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">#6523</th>
+                                                    <td>September 10, 2020</td>
+                                                    <td>Processing</td>
+                                                    <td>$326.63 for 3 items</td>
+                                                    <td><a href="#" class="axil-btn view-btn">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">#6523</th>
+                                                    <td>September 10, 2020</td>
+                                                    <td>Processing</td>
+                                                    <td>$326.63 for 3 items</td>
+                                                    <td><a href="#" class="axil-btn view-btn">View</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="nav-orders" role="tabpanel">
-                                    <div class="axil-dashboard-order">
-                                        <div class="table-responsive">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">Order</th>
-                                                        <th scope="col">Date</th>
-                                                        <th scope="col">Status</th>
-                                                        <th scope="col">Total</th>
-                                                        <th scope="col">Actions</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="row">#6523</th>
-                                                        <td>September 10, 2020</td>
-                                                        <td>Processing</td>
-                                                        <td>$326.63 for 3 items</td>
-                                                        <td><a href="#" class="axil-btn view-btn">View</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">#6523</th>
-                                                        <td>September 10, 2020</td>
-                                                        <td>On Hold</td>
-                                                        <td>$326.63 for 3 items</td>
-                                                        <td><a href="#" class="axil-btn view-btn">View</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">#6523</th>
-                                                        <td>September 10, 2020</td>
-                                                        <td>Processing</td>
-                                                        <td>$326.63 for 3 items</td>
-                                                        <td><a href="#" class="axil-btn view-btn">View</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">#6523</th>
-                                                        <td>September 10, 2020</td>
-                                                        <td>Processing</td>
-                                                        <td>$326.63 for 3 items</td>
-                                                        <td><a href="#" class="axil-btn view-btn">View</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">#6523</th>
-                                                        <td>September 10, 2020</td>
-                                                        <td>Processing</td>
-                                                        <td>$326.63 for 3 items</td>
-                                                        <td><a href="#" class="axil-btn view-btn">View</a></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-downloads" role="tabpanel">
+                                <div class="axil-dashboard-order">
+                                    <p>You don't have any download</p>
                                 </div>
-                                <div class="tab-pane fade" id="nav-downloads" role="tabpanel">
-                                    <div class="axil-dashboard-order">
-                                        <p>You don't have any download</p>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="nav-address" role="tabpanel">
-                                    <div class="axil-dashboard-address">
-                                        <p class="notice-text">The following addresses will be used on the checkout page
-                                            by default.</p>
-                                        <div class="row row--30">
-                                            <div class="col-lg-6">
-                                                <div class="address-info mb--40">
-                                                    <div
-                                                        class="addrss-header d-flex align-items-center justify-content-between">
-                                                        <h4 class="title mb-0">Shipping Address</h4>
-                                                        <a href="#" class="address-edit"><i><svg
-                                                                    xmlns="http://www.w3.org/2000/svg" id="Layer_1"
-                                                                    data-name="Layer 1" viewBox="0 0 24 24" width="15"
-                                                                    height="15">
-                                                                    <path
-                                                                        d="m18.813,10c.309,0,.601-.143.79-.387s.255-.562.179-.861c-.311-1.217-.945-2.329-1.833-3.217l-3.485-3.485c-1.322-1.322-3.08-2.05-4.95-2.05h-4.515C2.243,0,0,2.243,0,5v14c0,2.757,2.243,5,5,5h3c.552,0,1-.448,1-1s-.448-1-1-1h-3c-1.654,0-3-1.346-3-3V5c0-1.654,1.346-3,3-3h4.515c.163,0,.325.008.485.023v4.977c0,1.654,1.346,3,3,3h5.813Zm-6.813-3V2.659c.379.218.732.488,1.05.806l3.485,3.485c.314.314.583.668.803,1.05h-4.338c-.551,0-1-.449-1-1Zm11.122,4.879c-1.134-1.134-3.11-1.134-4.243,0l-6.707,6.707c-.755.755-1.172,1.76-1.172,2.829v1.586c0,.552.448,1,1,1h1.586c1.069,0,2.073-.417,2.828-1.172l6.707-6.707c.567-.567.879-1.32.879-2.122s-.312-1.555-.878-2.121Zm-1.415,2.828l-6.708,6.707c-.377.378-.879.586-1.414.586h-.586v-.586c0-.534.208-1.036.586-1.414l6.708-6.707c.377-.378,1.036-.378,1.414,0,.189.188.293.439.293.707s-.104.518-.293.707Z" />
-                                                                </svg></i></a>
-                                                    </div>
-                                                    <ul class="address-details">
-                                                        <li>Name: Annie Mario</li>
-                                                        <li>Email: annie@example.com</li>
-                                                        <li>Phone: 1234 567890</li>
-                                                        <li class="mt--30">7398 Smoke Ranch Road <br>
-                                                            Las Vegas, Nevada 89128</li>
-                                                    </ul>
+                            </div>
+                            <div class="tab-pane fade" id="nav-address" role="tabpanel">
+                                <div class="axil-dashboard-address">
+                                    <p class="notice-text">The following addresses will be used on the checkout page
+                                        by default.</p>
+                                    <div class="row row--30">
+                                        <div class="col-lg-6">
+                                            <div class="address-info mb--40">
+                                                <div class="addrss-header d-flex align-items-center justify-content-between">
+                                                    <h4 class="title mb-0">Shipping Address</h4>
+                                                    <a href="#" class="address-edit"><i><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15">
+                                                                <path d="m18.813,10c.309,0,.601-.143.79-.387s.255-.562.179-.861c-.311-1.217-.945-2.329-1.833-3.217l-3.485-3.485c-1.322-1.322-3.08-2.05-4.95-2.05h-4.515C2.243,0,0,2.243,0,5v14c0,2.757,2.243,5,5,5h3c.552,0,1-.448,1-1s-.448-1-1-1h-3c-1.654,0-3-1.346-3-3V5c0-1.654,1.346-3,3-3h4.515c.163,0,.325.008.485.023v4.977c0,1.654,1.346,3,3,3h5.813Zm-6.813-3V2.659c.379.218.732.488,1.05.806l3.485,3.485c.314.314.583.668.803,1.05h-4.338c-.551,0-1-.449-1-1Zm11.122,4.879c-1.134-1.134-3.11-1.134-4.243,0l-6.707,6.707c-.755.755-1.172,1.76-1.172,2.829v1.586c0,.552.448,1,1,1h1.586c1.069,0,2.073-.417,2.828-1.172l6.707-6.707c.567-.567.879-1.32.879-2.122s-.312-1.555-.878-2.121Zm-1.415,2.828l-6.708,6.707c-.377.378-.879.586-1.414.586h-.586v-.586c0-.534.208-1.036.586-1.414l6.708-6.707c.377-.378,1.036-.378,1.414,0,.189.188.293.439.293.707s-.104.518-.293.707Z" />
+                                                            </svg></i></a>
                                                 </div>
+                                                <ul class="address-details">
+                                                    <li>Name: Annie Mario</li>
+                                                    <li>Email: annie@example.com</li>
+                                                    <li>Phone: 1234 567890</li>
+                                                    <li class="mt--30">7398 Smoke Ranch Road <br>
+                                                        Las Vegas, Nevada 89128</li>
+                                                </ul>
                                             </div>
-                                            <div class="col-lg-6">
-                                                <div class="address-info">
-                                                    <div
-                                                        class="addrss-header d-flex align-items-center justify-content-between">
-                                                        <h4 class="title mb-0">Billing Address</h4>
-                                                        <a href="#" class="address-edit"><i><svg
-                                                                    xmlns="http://www.w3.org/2000/svg" id="Layer_1"
-                                                                    data-name="Layer 1" viewBox="0 0 24 24" width="15"
-                                                                    height="15">
-                                                                    <path
-                                                                        d="m18.813,10c.309,0,.601-.143.79-.387s.255-.562.179-.861c-.311-1.217-.945-2.329-1.833-3.217l-3.485-3.485c-1.322-1.322-3.08-2.05-4.95-2.05h-4.515C2.243,0,0,2.243,0,5v14c0,2.757,2.243,5,5,5h3c.552,0,1-.448,1-1s-.448-1-1-1h-3c-1.654,0-3-1.346-3-3V5c0-1.654,1.346-3,3-3h4.515c.163,0,.325.008.485.023v4.977c0,1.654,1.346,3,3,3h5.813Zm-6.813-3V2.659c.379.218.732.488,1.05.806l3.485,3.485c.314.314.583.668.803,1.05h-4.338c-.551,0-1-.449-1-1Zm11.122,4.879c-1.134-1.134-3.11-1.134-4.243,0l-6.707,6.707c-.755.755-1.172,1.76-1.172,2.829v1.586c0,.552.448,1,1,1h1.586c1.069,0,2.073-.417,2.828-1.172l6.707-6.707c.567-.567.879-1.32.879-2.122s-.312-1.555-.878-2.121Zm-1.415,2.828l-6.708,6.707c-.377.378-.879.586-1.414.586h-.586v-.586c0-.534.208-1.036.586-1.414l6.708-6.707c.377-.378,1.036-.378,1.414,0,.189.188.293.439.293.707s-.104.518-.293.707Z" />
-                                                                </svg></i></a>
-                                                    </div>
-                                                    <ul class="address-details">
-                                                        <li>Name: Annie Mario</li>
-                                                        <li>Email: annie@example.com</li>
-                                                        <li>Phone: 1234 567890</li>
-                                                        <li class="mt--30">7398 Smoke Ranch Road <br>
-                                                            Las Vegas, Nevada 89128</li>
-                                                    </ul>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="address-info">
+                                                <div class="addrss-header d-flex align-items-center justify-content-between">
+                                                    <h4 class="title mb-0">Billing Address</h4>
+                                                    <a href="#" class="address-edit"><i><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15">
+                                                                <path d="m18.813,10c.309,0,.601-.143.79-.387s.255-.562.179-.861c-.311-1.217-.945-2.329-1.833-3.217l-3.485-3.485c-1.322-1.322-3.08-2.05-4.95-2.05h-4.515C2.243,0,0,2.243,0,5v14c0,2.757,2.243,5,5,5h3c.552,0,1-.448,1-1s-.448-1-1-1h-3c-1.654,0-3-1.346-3-3V5c0-1.654,1.346-3,3-3h4.515c.163,0,.325.008.485.023v4.977c0,1.654,1.346,3,3,3h5.813Zm-6.813-3V2.659c.379.218.732.488,1.05.806l3.485,3.485c.314.314.583.668.803,1.05h-4.338c-.551,0-1-.449-1-1Zm11.122,4.879c-1.134-1.134-3.11-1.134-4.243,0l-6.707,6.707c-.755.755-1.172,1.76-1.172,2.829v1.586c0,.552.448,1,1,1h1.586c1.069,0,2.073-.417,2.828-1.172l6.707-6.707c.567-.567.879-1.32.879-2.122s-.312-1.555-.878-2.121Zm-1.415,2.828l-6.708,6.707c-.377.378-.879.586-1.414.586h-.586v-.586c0-.534.208-1.036.586-1.414l6.708-6.707c.377-.378,1.036-.378,1.414,0,.189.188.293.439.293.707s-.104.518-.293.707Z" />
+                                                            </svg></i></a>
                                                 </div>
+                                                <ul class="address-details">
+                                                    <li>Name: Annie Mario</li>
+                                                    <li>Email: annie@example.com</li>
+                                                    <li>Phone: 1234 567890</li>
+                                                    <li class="mt--30">7398 Smoke Ranch Road <br>
+                                                        Las Vegas, Nevada 89128</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="nav-account" role="tabpanel">
-                                    <div class="col-lg-9">
-                                        <div class="axil-dashboard-account">
-                                            <form class="account-details-form">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <div class="form-group">
-                                                            <label>First Name</label>
-                                                            <input type="text" class="form-control" value="Annie">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="form-group">
-                                                            <label>Last Name</label>
-                                                            <input type="text" class="form-control" value="Mario">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group mb--40">
-                                                            <label>Country/ Region</label>
-                                                            <select class="select2">
-                                                                <option value="1">United Kindom (UK)</option>
-                                                                <option value="1">United States (USA)</option>
-                                                                <option value="1">United Arab Emirates (UAE)</option>
-                                                                <option value="1">Australia</option>
-                                                            </select>
-                                                            <p class="b3 mt--10">This will be how your name will be
-                                                                displayed in the account section and in reviews</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <h5 class="title">Password Change</h5>
-                                                        <div class="form-group">
-                                                            <label>Password</label>
-                                                            <input type="password" class="form-control"
-                                                                value="123456789101112131415">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label>New Password</label>
-                                                            <input type="password" class="form-control">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label>Confirm New Password</label>
-                                                            <input type="password" class="form-control">
-                                                        </div>
-                                                        <div class="form-group mb--0">
-                                                            <input type="submit" class="axil-btn" value="Save Changes">
-                                                        </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-account" role="tabpanel">
+                                <div class="col-lg-9">
+                                    <div class="axil-dashboard-account">
+                                        <form class="account-details-form">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label>First Name</label>
+                                                        <input type="text" class="form-control" value="Annie">
                                                     </div>
                                                 </div>
-                                            </form>
-                                        </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label>Last Name</label>
+                                                        <input type="text" class="form-control" value="Mario">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group mb--40">
+                                                        <label>Country/ Region</label>
+                                                        <select class="select2">
+                                                            <option value="1">United Kindom (UK)</option>
+                                                            <option value="1">United States (USA)</option>
+                                                            <option value="1">United Arab Emirates (UAE)</option>
+                                                            <option value="1">Australia</option>
+                                                        </select>
+                                                        <p class="b3 mt--10">This will be how your name will be
+                                                            displayed in the account section and in reviews</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <h5 class="title">Password Change</h5>
+                                                    <div class="form-group">
+                                                        <label>Password</label>
+                                                        <input type="password" class="form-control" value="123456789101112131415">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>New Password</label>
+                                                        <input type="password" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Confirm New Password</label>
+                                                        <input type="password" class="form-control">
+                                                    </div>
+                                                    <div class="form-group mb--0">
+                                                        <input type="submit" class="axil-btn" value="Save Changes">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -293,20 +249,11 @@ if (isset($_GET['action']) && $_GET['action'] == 'logout') {
                 </div>
             </div>
         </div>
-        <!-- End My Account Area  -->
-    </main>
+    </div>
+    <!-- End My Account Area  -->
+</main>
 
+<?php
 
-
-
-
-    <?php
-    include "../inc/service-area.php";
-    include '../inc/footer.php';
-    include "../inc/script.php";
-    ?>
-
-
-</body>
-
-</html>
+include_once __DIR__ . '/../inc/_footer.client.inc.php';
+?>

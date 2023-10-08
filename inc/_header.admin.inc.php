@@ -63,21 +63,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['act
 
         <nav class="navbar">
             <a href="#" class="sidebar-toggler">
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0,0,256,256"
-                    style="fill:#ffffff;">
-                    <g fill-opacity="0.16863" fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
-                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray=""
-                        stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                        style="mix-blend-mode: normal">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0,0,256,256" style="fill:#ffffff;">
+                    <g fill-opacity="0.16863" fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
                         <g transform="scale(10.66667,10.66667)">
-                            <path
-                                d="M20,14h-16c-1.105,0 -2,-0.895 -2,-2v0c0,-1.105 0.895,-2 2,-2h16c1.105,0 2,0.895 2,2v0c0,1.105 -0.895,2 -2,2z"
-                                opacity="0.35"></path>
-                            <path
-                                d="M20,7h-16c-1.105,0 -2,-0.895 -2,-2v0c0,-1.105 0.895,-2 2,-2h16c1.105,0 2,0.895 2,2v0c0,1.105 -0.895,2 -2,2z">
+                            <path d="M20,14h-16c-1.105,0 -2,-0.895 -2,-2v0c0,-1.105 0.895,-2 2,-2h16c1.105,0 2,0.895 2,2v0c0,1.105 -0.895,2 -2,2z" opacity="0.35"></path>
+                            <path d="M20,7h-16c-1.105,0 -2,-0.895 -2,-2v0c0,-1.105 0.895,-2 2,-2h16c1.105,0 2,0.895 2,2v0c0,1.105 -0.895,2 -2,2z">
                             </path>
-                            <path
-                                d="M20,21h-16c-1.105,0 -2,-0.895 -2,-2v0c0,-1.105 0.895,-2 2,-2h16c1.105,0 2,0.895 2,2v0c0,1.105 -0.895,2 -2,2z">
+                            <path d="M20,21h-16c-1.105,0 -2,-0.895 -2,-2v0c0,-1.105 0.895,-2 2,-2h16c1.105,0 2,0.895 2,2v0c0,1.105 -0.895,2 -2,2z">
                             </path>
                         </g>
                     </g>
@@ -86,10 +78,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['act
             <div class="navbar-content">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="wd-30 ht-30 rounded-circle" src="../public/assets_admin/images/faces/face1.jpg"
-                                alt="profile">
+                        <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="wd-30 ht-30 rounded-circle" src="../public/assets_admin/images/faces/face1.jpg" alt="profile">
 
                         </a>
                         <div class="dropdown-menu p-0" aria-labelledby="profileDropdown">
@@ -147,17 +137,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['act
                 <ul class="nav">
                     <li class="nav-item">
                         <a href="index.php" class="nav-link">
-                            <img
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nK3RPQ6DMAwFYDMVwS26IlaQuEnn9kxdI2Xze2HJkLt1CgoDoAoEkbDkzZ/lH5G7wlpbO+eelwHJhqovAJ2IFKcAQJsAU5L9gowxJVRHAj8CcZPfBeiMhhhjkTp9/gr3gc6oSeCdBUIIDwK8MNK6R9bSt53Ve19lPe4oJisTorJqiO3FAAAAAElFTkSuQmCC">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nK3RPQ6DMAwFYDMVwS26IlaQuEnn9kxdI2Xze2HJkLt1CgoDoAoEkbDkzZ/lH5G7wlpbO+eelwHJhqovAJ2IFKcAQJsAU5L9gowxJVRHAj8CcZPfBeiMhhhjkTp9/gr3gc6oSeCdBUIIDwK8MNK6R9bSt53Ve19lPe4oJisTorJqiO3FAAAAAElFTkSuQmCC">
                             <span class="link-title">Dashboard</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#forms2" role="button" aria-expanded="false"
-                            aria-controls="forms">
-                            <img
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nK3RPQ6DMAwFYDMVwS26IlaQuEnn9kxdI2Xze2HJkLt1CgoDoAoEkbDkzZ/lH5G7wlpbO+eelwHJhqovAJ2IFKcAQJsAU5L9gowxJVRHAj8CcZPfBeiMhhhjkTp9/gr3gc6oSeCdBUIIDwK8MNK6R9bSt53Ve19lPe4oJisTorJqiO3FAAAAAElFTkSuQmCC">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#forms2" role="button" aria-expanded="false" aria-controls="forms">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nK3RPQ6DMAwFYDMVwS26IlaQuEnn9kxdI2Xze2HJkLt1CgoDoAoEkbDkzZ/lH5G7wlpbO+eelwHJhqovAJ2IFKcAQJsAU5L9gowxJVRHAj8CcZPfBeiMhhhjkTp9/gr3gc6oSeCdBUIIDwK8MNK6R9bSt53Ve19lPe4oJisTorJqiO3FAAAAAElFTkSuQmCC">
                             <span class="link-title">Categories</span>
                             <i class="link-arrow" data-feather="chevron-down"></i>
                         </a>
@@ -174,10 +161,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['act
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#forms3" role="button" aria-expanded="false"
-                            aria-controls="forms">
-                            <img
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nK3RPQ6DMAwFYDMVwS26IlaQuEnn9kxdI2Xze2HJkLt1CgoDoAoEkbDkzZ/lH5G7wlpbO+eelwHJhqovAJ2IFKcAQJsAU5L9gowxJVRHAj8CcZPfBeiMhhhjkTp9/gr3gc6oSeCdBUIIDwK8MNK6R9bSt53Ve19lPe4oJisTorJqiO3FAAAAAElFTkSuQmCC">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#forms3" role="button" aria-expanded="false" aria-controls="forms">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nK3RPQ6DMAwFYDMVwS26IlaQuEnn9kxdI2Xze2HJkLt1CgoDoAoEkbDkzZ/lH5G7wlpbO+eelwHJhqovAJ2IFKcAQJsAU5L9gowxJVRHAj8CcZPfBeiMhhhjkTp9/gr3gc6oSeCdBUIIDwK8MNK6R9bSt53Ve19lPe4oJisTorJqiO3FAAAAAElFTkSuQmCC">
                             <span class="link-title">Brand</span>
                             <i class="link-arrow" data-feather="chevron-down"></i>
                         </a>
@@ -194,10 +179,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['act
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#forms666" role="button"
-                            aria-expanded="false" aria-controls="forms">
-                            <img
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nK3RPQ6DMAwFYDMVwS26IlaQuEnn9kxdI2Xze2HJkLt1CgoDoAoEkbDkzZ/lH5G7wlpbO+eelwHJhqovAJ2IFKcAQJsAU5L9gowxJVRHAj8CcZPfBeiMhhhjkTp9/gr3gc6oSeCdBUIIDwK8MNK6R9bSt53Ve19lPe4oJisTorJqiO3FAAAAAElFTkSuQmCC">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#forms666" role="button" aria-expanded="false" aria-controls="forms">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nK3RPQ6DMAwFYDMVwS26IlaQuEnn9kxdI2Xze2HJkLt1CgoDoAoEkbDkzZ/lH5G7wlpbO+eelwHJhqovAJ2IFKcAQJsAU5L9gowxJVRHAj8CcZPfBeiMhhhjkTp9/gr3gc6oSeCdBUIIDwK8MNK6R9bSt53Ve19lPe4oJisTorJqiO3FAAAAAElFTkSuQmCC">
                             <span class="link-title">Product</span>
                             <i class="link-arrow" data-feather="chevron-down"></i>
                         </a>
@@ -214,10 +197,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['act
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#forms9" role="button" aria-expanded="false"
-                            aria-controls="forms">
-                            <img
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nK3RPQ6DMAwFYDMVwS26IlaQuEnn9kxdI2Xze2HJkLt1CgoDoAoEkbDkzZ/lH5G7wlpbO+eelwHJhqovAJ2IFKcAQJsAU5L9gowxJVRHAj8CcZPfBeiMhhhjkTp9/gr3gc6oSeCdBUIIDwK8MNK6R9bSt53Ve19lPe4oJisTorJqiO3FAAAAAElFTkSuQmCC">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#forms9" role="button" aria-expanded="false" aria-controls="forms">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nK3RPQ6DMAwFYDMVwS26IlaQuEnn9kxdI2Xze2HJkLt1CgoDoAoEkbDkzZ/lH5G7wlpbO+eelwHJhqovAJ2IFKcAQJsAU5L9gowxJVRHAj8CcZPfBeiMhhhjkTp9/gr3gc6oSeCdBUIIDwK8MNK6R9bSt53Ve19lPe4oJisTorJqiO3FAAAAAElFTkSuQmCC">
                             <span class="link-title">Post</span>
                             <i class="link-arrow" data-feather="chevron-down"></i>
                         </a>
@@ -234,10 +215,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['act
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#forms4" role="button" aria-expanded="false"
-                            aria-controls="forms">
-                            <img
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nK3RPQ6DMAwFYDMVwS26IlaQuEnn9kxdI2Xze2HJkLt1CgoDoAoEkbDkzZ/lH5G7wlpbO+eelwHJhqovAJ2IFKcAQJsAU5L9gowxJVRHAj8CcZPfBeiMhhhjkTp9/gr3gc6oSeCdBUIIDwK8MNK6R9bSt53Ve19lPe4oJisTorJqiO3FAAAAAElFTkSuQmCC">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#forms4" role="button" aria-expanded="false" aria-controls="forms">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nK3RPQ6DMAwFYDMVwS26IlaQuEnn9kxdI2Xze2HJkLt1CgoDoAoEkbDkzZ/lH5G7wlpbO+eelwHJhqovAJ2IFKcAQJsAU5L9gowxJVRHAj8CcZPfBeiMhhhjkTp9/gr3gc6oSeCdBUIIDwK8MNK6R9bSt53Ve19lPe4oJisTorJqiO3FAAAAAElFTkSuQmCC">
                             <span class="link-title">User</span>
                             <i class="link-arrow" data-feather="chevron-down"></i>
                         </a>
@@ -257,10 +236,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['act
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#forms90" role="button"
-                            aria-expanded="false" aria-controls="forms">
-                            <img
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nK3RPQ6DMAwFYDMVwS26IlaQuEnn9kxdI2Xze2HJkLt1CgoDoAoEkbDkzZ/lH5G7wlpbO+eelwHJhqovAJ2IFKcAQJsAU5L9gowxJVRHAj8CcZPfBeiMhhhjkTp9/gr3gc6oSeCdBUIIDwK8MNK6R9bSt53Ve19lPe4oJisTorJqiO3FAAAAAElFTkSuQmCC">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#forms90" role="button" aria-expanded="false" aria-controls="forms">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nK3RPQ6DMAwFYDMVwS26IlaQuEnn9kxdI2Xze2HJkLt1CgoDoAoEkbDkzZ/lH5G7wlpbO+eelwHJhqovAJ2IFKcAQJsAU5L9gowxJVRHAj8CcZPfBeiMhhhjkTp9/gr3gc6oSeCdBUIIDwK8MNK6R9bSt53Ve19lPe4oJisTorJqiO3FAAAAAElFTkSuQmCC">
                             <span class="link-title">Note</span>
                             <i class="link-arrow" data-feather="chevron-down"></i>
                         </a>

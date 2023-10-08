@@ -1,7 +1,22 @@
 <?php
-include_once __DIR__ . "/../classes/product.php";
-include_once __DIR__ . "/../classes/cart.php";
-
+session_start();
+include_once __DIR__ .  '/../classes/adminlogin.php';
+include_once __DIR__ .  '/../classes/brand.php';
+include_once __DIR__ .  '/../classes/cart.php';
+include_once __DIR__ .  '/../classes/category.php';
+include_once __DIR__ .  '/../classes/note.php';
+include_once __DIR__ .  '/../classes/product.php';
+include_once __DIR__ .  '/../classes/user.php';
+$adminlogin = new adminlogin();
+$brand = new brand();
+$cart = new cart();
+$category = new category();
+$note = new note();
+$product = new product();
+$user = new user();
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
+    $user->logout();
+}
 ?>
 
 
@@ -12,7 +27,7 @@ include_once __DIR__ . "/../classes/cart.php";
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../public/assets_client/images/favicon.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="./public/assets_client/images/favicon.jpg" type="image/x-icon">
 
     <!-- CSS
     ============================================ -->
@@ -20,16 +35,16 @@ include_once __DIR__ . "/../classes/cart.php";
     <!-- Bootstrap CSS -->
     <!-- <base href="http://nht-ps27199.free.nf/"> -->
     <base href="http://localhost/webmvc/">
-    <link rel="stylesheet" href="../public/assets_client/css/vendor/flaticon/flaticon.css" />
-    <link rel="stylesheet" href="../public/assets_client/css/vendor/bootstrap.min.css" />
-    <link rel="stylesheet" href="../public/assets_client/css/vendor/font-awesome.css" />
-    <link rel="stylesheet" href="../public/assets_client/css/vendor/slick.css" />
-    <link rel="stylesheet" href="../public/assets_client/css/vendor/slick-theme.css" />
-    <link rel="stylesheet" href="../public/assets_client/css/vendor/jquery-ui.min.css" />
-    <link rel="stylesheet" href="../public/assets_client/css/vendor/sal.css" />
-    <link rel="stylesheet" href="../public/assets_client/css/vendor/magnific-popup.css" />
-    <link rel="stylesheet" href="../public/assets_client/css/vendor/base.css" />
-    <link rel="stylesheet" href="../public/assets_client/css/style.min.css" />
+    <link rel="stylesheet" href="./public/assets_client/css/vendor/flaticon/flaticon.css" />
+    <link rel="stylesheet" href="./public/assets_client/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="./public/assets_client/css/vendor/font-awesome.css" />
+    <link rel="stylesheet" href="./public/assets_client/css/vendor/slick.css" />
+    <link rel="stylesheet" href="./public/assets_client/css/vendor/slick-theme.css" />
+    <link rel="stylesheet" href="./public/assets_client/css/vendor/jquery-ui.min.css" />
+    <link rel="stylesheet" href="./public/assets_client/css/vendor/sal.css" />
+    <link rel="stylesheet" href="./public/assets_client/css/vendor/magnific-popup.css" />
+    <link rel="stylesheet" href="./public/assets_client/css/vendor/base.css" />
+    <link rel="stylesheet" href="./public/assets_client/css/style.min.css" />
 </head>
 
 <body class="sticky-header">
@@ -42,11 +57,11 @@ include_once __DIR__ . "/../classes/cart.php";
             <div class="container">
                 <div class="header-navbar">
                     <div class="header-brand">
-                        <a href="index.php" class="logo logo-dark">
-                            <img src="../public/assets_client/images/logo/logo.png" alt="Site Logo" />
+                        <a href="client/home.php" class="logo logo-dark">
+                            <img src="./public/assets_client/images/logo/logo.png" alt="Site Logo" />
                         </a>
-                        <a href="index.php" class="logo logo-light">
-                            <img src="../public/assets_client/images/logo/logo-light.png" alt="Site Logo" />
+                        <a href="client/home.php" class="logo logo-light">
+                            <img src="./public/assets_client/images/logo/logo-light.png" alt="Site Logo" />
                         </a>
                     </div>
                     <div class="header-main-nav">
@@ -60,16 +75,16 @@ include_once __DIR__ . "/../classes/cart.php";
                                 </svg>
                             </button>
                             <div class="mobile-nav-brand">
-                                <a href="index.php" class="logo">
-                                    <img src="../public/assets_client/images/logo/logo.png" alt="Site Logo" />
+                                <a href="client/home.php" class="logo">
+                                    <img src="./public/assets_client/images/logo/logo.png" alt="Site Logo" />
                                 </a>
                             </div>
                             <ul class="mainmenu">
-                                <li><a href="index.php">Home</a></li>
-                                <li><a href="page/shop.php">Shop</a></li>
-                                <li><a href="page/about-us.php">About</a></li>
-                                <li><a href="page/blog.php">Blog</a></li>
-                                <li><a href="page/contact.php">Contact</a></li>
+                                <li><a href="client/home.php">Home</a></li>
+                                <li><a href="client/shop.php">Shop</a></li>
+                                <li><a href="client/about-us.php">About</a></li>
+                                <li><a href="client/blog.php">Blog</a></li>
+                                <li><a href="client/contact.php">Contact</a></li>
                             </ul>
                         </nav>
                         <!-- End Mainmanu Nav -->
@@ -98,7 +113,7 @@ include_once __DIR__ . "/../classes/cart.php";
                                 </a>
                             </li>
                             <!-- <li class="wishlist">
-                            <a href="page/wishlist.php">
+                            <a href="client/wishlist.php">
                                 <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="20"
                                     height="20">
                                     <path
@@ -130,57 +145,65 @@ include_once __DIR__ . "/../classes/cart.php";
                                 </a>
                                 <div class="my-account-dropdown">
                                     <?php
-                                // $login_check = Session::get('user_login');
-                                $login_check = '';
-                                if (isset($login_check)) {
-                                    echo '<ul>
+                                    // $login_check = Session::get('user_login');
+                                    if (isset($_SESSION['user_id'])) {
+                                        # code...
+                                        $login_check =  $_SESSION['user_id'];
+                                    }
+                                    if (isset($login_check)) {
+                                        echo '<ul>
                                         <li>
-                                            <a href="page/my-account.php">My Account</a>
+                                            <a href="client/my-account.php">My Account</a>
                                         </li>
                                     </ul>';
-                                } else {
-                                    echo '<!-- <ul>
+                                    } else {
+                                        echo '<!-- <ul>
                                         <li>
-                                            <a href="page/my-account.php">My Account</a>
+                                            <a href="client/my-account.php">My Account</a>
                                         </li>
                                     </ul> -->';
-                                }
-                                ?>
-                                    <!-- <ul>
-                                    <li>
-                                        <a href="page/my-account.php">My Account</a>
-                                    </li>
-                                </ul> -->
-                                    <?php
-                                if (isset($_GET['userid'])) {
-                                    // Session::destroy();
-
-                                }
-                                ?>
-                                    <div class="login-btn">
-                                        <?php
-                                    // $login_check = Session::get('user_login');
-                                    if ($login_check) {
-                                        echo '<a href="page/my-account.php" class="axil-btn btn-bg-primary" name="logout">Logout</a>';
-                                    } else {
-                                        echo '<a href="page/sign-in.php" class="axil-btn btn-bg-primary">Login</a>';
                                     }
                                     ?>
-                                        <!-- <a href="page/sign-in.php" class="axil-btn btn-bg-primary">Login</a> -->
+                                    <!-- <ul>
+                                    <li>
+                                        <a href="client/my-account.php">My Account</a>
+                                    </li>
+                                </ul> -->
+
+
+                                    <div class="login-btn">
+                                        <?php
+                                        // $login_check = Session::get('user_login');
+                                        if (isset($login_check)) {
+                                        ?>
+                                        <form action="" method="post">
+
+                                            <button type="submit" name="logout"
+                                                class="axil-btn btn-bg-primary">Logout</button>
+                                        </form>
+                                        <?php
+
+                                        } else {
+                                        ?>
+                                        <a href="./client/sign-in.php" class="axil-btn btn-bg-primary">Login</a>
+                                        <?php
+                                        }
+                                        ?>
+                                        <!-- <a href="client/sign-in.php" class="axil-btn btn-bg-primary">Login</a> -->
                                     </div>
                                     <div class="reg-footer text-center">
                                         <?php
-                                    // $login_check = Session::get('user_login');
-                                    if ($login_check) {
-                                        echo '<!-- No account yet?
-                                        <a href="page/sign-up.php" class="btn-link">REGISTER HERE.</a> -->';
-                                    } else {
-                                        echo 'No account yet?
-                                        <a href="page/sign-up.php" class="btn-link">REGISTER HERE.</a>';
-                                    }
-                                    ?>
+                                        // $login_check = Session::get('user_login');
+                                        if (isset($login_check)) {
+                                            echo '<!-- No account yet?
+                                        <a href="client/sign-up.php" class="btn-link">REGISTER HERE.</a> -->';
+                                        } else {
+                                            echo 'No account yet?
+                                        <a href="client/sign-up.php" class="btn-link">REGISTER HERE.</a>';
+                                        }
+                                        ?>
                                         <!-- No account yet?
-                                    <a href="page/sign-up.php" class="btn-link">REGISTER HERE.</a> -->
+                                    <a href="client/sign-up.php" class="btn-link">REGISTER HERE.</a> -->
                                     </div>
                                 </div>
                             </li>
@@ -227,39 +250,39 @@ include_once __DIR__ . "/../classes/cart.php";
                                         <div
                                             class="single-product-thumbnail product-large-thumbnail axil-product thumbnail-badge zoom-gallery">
                                             <div class="thumbnail">
-                                                <img src="../public/assets_client/images/product/product-big-01.png"
+                                                <img src="./public/assets_client/images/product/product-big-01.png"
                                                     alt="Product Images" />
                                                 <div class="label-block label-right">
                                                     <div class="product-badget">20% OFF</div>
                                                 </div>
                                                 <div class="product-quick-view position-view">
-                                                    <a href="../public/assets_client/images/product/product-big-01.png"
+                                                    <a href="./public/assets_client/images/product/product-big-01.png"
                                                         class="popup-zoom">
                                                         <i class="far fa-search-plus"></i>
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="thumbnail">
-                                                <img src="../public/assets_client/images/product/product-big-02.png"
+                                                <img src="./public/assets_client/images/product/product-big-02.png"
                                                     alt="Product Images" />
                                                 <div class="label-block label-right">
                                                     <div class="product-badget">20% OFF</div>
                                                 </div>
                                                 <div class="product-quick-view position-view">
-                                                    <a href="../public/assets_client/images/product/product-big-02.png"
+                                                    <a href="./public/assets_client/images/product/product-big-02.png"
                                                         class="popup-zoom">
                                                         <i class="far fa-search-plus"></i>
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="thumbnail">
-                                                <img src="../public/assets_client/images/product/product-big-03.png"
+                                                <img src="./public/assets_client/images/product/product-big-03.png"
                                                     alt="Product Images" />
                                                 <div class="label-block label-right">
                                                     <div class="product-badget">20% OFF</div>
                                                 </div>
                                                 <div class="product-quick-view position-view">
-                                                    <a href="../public/assets_client/images/product/product-big-03.png"
+                                                    <a href="./public/assets_client/images/product/product-big-03.png"
                                                         class="popup-zoom">
                                                         <i class="far fa-search-plus"></i>
                                                     </a>
@@ -270,15 +293,15 @@ include_once __DIR__ . "/../classes/cart.php";
                                     <div class="col-lg-2 order-lg-1">
                                         <div class="product-small-thumb small-thumb-wrapper">
                                             <div class="small-thumb-img">
-                                                <img src="../public/assets_client/images/product/product-thumb/thumb-08.png"
+                                                <img src="./public/assets_client/images/product/product-thumb/thumb-08.png"
                                                     alt="thumb image" />
                                             </div>
                                             <div class="small-thumb-img">
-                                                <img src="../public/assets_client/images/product/product-thumb/thumb-07.png"
+                                                <img src="./public/assets_client/images/product/product-thumb/thumb-07.png"
                                                     alt="thumb image" />
                                             </div>
                                             <div class="small-thumb-img">
-                                                <img src="../public/assets_client/images/product/product-thumb/thumb-09.png"
+                                                <img src="./public/assets_client/images/product/product-thumb/thumb-09.png"
                                                     alt="thumb image" />
                                             </div>
                                         </div>
@@ -290,7 +313,7 @@ include_once __DIR__ . "/../classes/cart.php";
                                     <div class="inner">
                                         <div class="product-rating">
                                             <div class="star-rating">
-                                                <img src="../public/assets_client/images/icons/rate.png"
+                                                <img src="./public/assets_client/images/icons/rate.png"
                                                     alt="Rate Images" />
                                             </div>
                                             <div class="review-link">
@@ -361,11 +384,11 @@ include_once __DIR__ . "/../classes/cart.php";
                                             <!-- Start Product Action  -->
                                             <ul class="product-action d-flex-center mb--0">
                                                 <li class="add-to-cart">
-                                                    <a href="page/cart.php" class="axil-btn btn-bg-primary">Add to
+                                                    <a href="client/cart.php" class="axil-btn btn-bg-primary">Add to
                                                         Cart</a>
                                                 </li>
                                                 <li class="wishlist">
-                                                    <a href="page/wishlist.php" class="axil-btn wishlist-btn"><i
+                                                    <a href="client/wishlist.php" class="axil-btn wishlist-btn"><i
                                                             class="far fa-heart"></i></a>
                                                 </li>
                                             </ul>
@@ -405,8 +428,8 @@ include_once __DIR__ . "/../classes/cart.php";
                 <span class="subtotal-amount">$610.00</span>
             </h3> -->
                 <div class="group-btn">
-                    <a href="page/cart.php" class="axil-btn btn-bg-primary viewcart-btn">View Cart</a>
-                    <a href="page/checkout.php" class="axil-btn btn-bg-secondary checkout-btn">Checkout</a>
+                    <a href="client/cart.php" class="axil-btn btn-bg-primary viewcart-btn">View Cart</a>
+                    <a href="client/checkout.php" class="axil-btn btn-bg-secondary checkout-btn">Checkout</a>
                 </div>
             </div>
         </div>
