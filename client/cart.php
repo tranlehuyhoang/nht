@@ -38,9 +38,9 @@ if (isset($_GET['delid'])) {
                             <?php
                             if (isset($codeinsert)) {
                                 if ($codeinsert && $codeinsert->num_rows > 0) {
-                                    $i = 0;
+                                    $iz = 0;
                                     while ($result = $codeinsert->fetch_assoc()) {
-                                        # code...
+                                        $iz += $result['price'] * $result['cartquantity'];
                             ?>
                                         <tr>
                                             <td class="product-remove">
@@ -65,7 +65,7 @@ if (isset($_GET['delid'])) {
                                             </td>
                                         </tr>
                                     <?php
-                                        $i++;
+
                                     }
                                 } else {
                                     ?>
@@ -123,8 +123,13 @@ if (isset($_GET['delid'])) {
                                     </tbody>
                                 </table>
                             </div>
-                            <a href="" class="axil-btn btn-bg-primary checkout-btn mua" type="submit" onclick="muahang()">Process to
+
+
+                            <input type="number" style="display: none;" name="user" value="<?php echo $_SESSION['user_id'] ?>">
+                            <input type="number" style="display: none;" name="total" value="<?php echo $iz ?>">
+                            <a href="./client/checkout.php" class="axil-btn btn-bg-primary checkout-btn mua" type="submit">Process to
                                 Checkout</a>
+
                         </div>
                     </div>
                 </div>

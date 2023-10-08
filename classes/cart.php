@@ -46,7 +46,7 @@ class cart
             $arlet = "<div class='alert alert-danger' role='alert'>Error</div>";
             return $arlet;
         } else {
-            $query = "SELECT * FROM table_cart WHERE cartproductid = '$cartproductid' AND cartuserid = '$cartuserid'  ";
+            $query = "SELECT * FROM table_cart WHERE cartproductid = '$cartproductid' AND cartuserid = '$cartuserid' AND order_id = 0 ";
             $result = $this->db->select($query);
 
             if ($result) {
@@ -134,6 +134,7 @@ class cart
         INNER JOIN table_user u ON c.cartuserid = u.userid
         INNER JOIN table_category cat ON p.catId = cat.catId 
         WHERE c.cartuserid = '$id'
+        AND order_id = 0
         ORDER BY c.cartid DESC;";
         $result = $this->db->select($query);
 
